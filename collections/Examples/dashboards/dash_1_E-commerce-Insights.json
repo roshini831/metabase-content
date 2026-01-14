@@ -1,7 +1,7 @@
 {
   "description": "Overview of sample data and hypothetical sales",
   "archived": false,
-  "view_count": 1,
+  "view_count": 3,
   "collection_position": 2,
   "dashcards": [
     {
@@ -178,14 +178,14 @@
                 [
                   "desc",
                   {
-                    "lib/uuid": "ea554621-356b-47f3-a762-6c2131ec476f"
+                    "lib/uuid": "caeb5312-6b21-4405-94df-d94b6a9e4965"
                   },
                   [
                     "aggregation",
                     {
-                      "lib/uuid": "a88d0b59-edeb-465c-8413-cafd033a4956"
+                      "lib/uuid": "29b4bc35-443f-4642-ac36-0da21fa0c9fb"
                     },
-                    "39dd214b-90f9-4ca8-a639-672d7de71fc5"
+                    "d8d1da8e-cf46-4263-a0f7-a80fc5b2dd42"
                   ]
                 ]
               ],
@@ -193,7 +193,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "39dd214b-90f9-4ca8-a639-672d7de71fc5"
+                    "lib/uuid": "d8d1da8e-cf46-4263-a0f7-a80fc5b2dd42"
                   }
                 ]
               ],
@@ -203,7 +203,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "8c9e197c-1c85-4e1c-b06f-3611bd52e5a7",
+                    "lib/uuid": "674bea0c-3e9b-4d7c-a069-28954541dc3a",
                     "effective-type": "type/Text"
                   },
                   17
@@ -213,7 +213,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "27914184-ad38-4630-b9da-8bdf78f757e9",
+                    "lib/uuid": "d54aae20-07db-41b2-9526-6dd7b5c9415e",
                     "effective-type": "type/Text"
                   },
                   18
@@ -224,14 +224,14 @@
                 [
                   "!=",
                   {
-                    "lib/uuid": "a8c25308-5c74-4153-80ec-37115d560c62"
+                    "lib/uuid": "d949c178-3933-49bd-9d34-cf4947768a15"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Text",
                       "source-field": 14,
-                      "lib/uuid": "16f9a405-b5a4-4084-8417-b0fef9805e77",
+                      "lib/uuid": "49cd161c-aa5f-4fe7-893e-fc185068c46c",
                       "effective-type": "type/Text"
                     },
                     17
@@ -246,13 +246,13 @@
                 [
                   ">=",
                   {
-                    "lib/uuid": "06a05b18-0dd6-4f7b-9f2f-c8f4f0562d3d"
+                    "lib/uuid": "41d36d60-aea6-4c13-ac98-bf608a117a2a"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Integer",
-                      "lib/uuid": "07801a41-db7f-431d-97e3-3224d44bb4ba"
+                      "lib/uuid": "7b338fe1-4f19-4b8c-941f-a3e3c7e319de"
                     },
                     "count"
                   ],
@@ -496,7 +496,7 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "960006b9-13bb-465f-8e9f-e7aa467ca03d"
+                    "lib/uuid": "edb3787a-cead-409f-ade2-bb4920af8ffe"
                   },
                   19
                 ]
@@ -507,7 +507,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "07db8192-5b0f-44fb-a4a3-49c6899e1c29",
+                    "lib/uuid": "912f4df1-c3e2-446f-b06a-b726c5e0cf6f",
                     "effective-type": "type/Text"
                   },
                   18
@@ -518,7 +518,7 @@
                     "temporal-unit": "quarter",
                     "base-type": "type/DateTime",
                     "original-temporal-unit": "month",
-                    "lib/uuid": "c62d0372-fba0-4da7-bef7-669d0d87da42",
+                    "lib/uuid": "31e138e5-1415-4e68-8313-a8d7dcb19816",
                     "effective-type": "type/DateTime"
                   },
                   13
@@ -530,13 +530,13 @@
                   "time-interval",
                   {
                     "include-current": true,
-                    "lib/uuid": "1eafcf85-3b56-4490-b980-8ad1477ad009"
+                    "lib/uuid": "8da4e6d1-33eb-44c3-96e0-e03e309171ef"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "53bb4508-6d8e-4d43-b2ad-1bad07d02b4e",
+                      "lib/uuid": "085c920f-d2ea-420e-adc2-8dd354799f94",
                       "effective-type": "type/DateTime"
                     },
                     13
@@ -744,13 +744,13 @@
                 [
                   "avg",
                   {
-                    "lib/uuid": "84b5ff29-779e-4d50-911c-8062486af815"
+                    "lib/uuid": "5ce69177-f54f-4f6f-b0d5-517027cfb303"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "daefc8bb-c0bd-4218-99c2-4faecb44c970",
+                      "lib/uuid": "ff8b3138-0c3a-4941-9850-49b64d1d2384",
                       "effective-type": "type/Float"
                     },
                     16
@@ -901,7 +901,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "99ef3dd2-611d-4ef4-a368-e43be38d0f2b"
+                    "lib/uuid": "a0d49f71-1fb1-41c1-a410-c9315fdd7add"
                   },
                   "STATE"
                 ]
@@ -910,13 +910,13 @@
                 [
                   "sum",
                   {
-                    "lib/uuid": "7b07d088-43d1-4c78-b948-10dc5e69c61e"
+                    "lib/uuid": "13b8c396-6a8b-4123-92d1-eb2daf45ea6c"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "3653a9a7-d7ea-4f3a-b3dc-ac11ccbe9a81"
+                      "lib/uuid": "5593f10e-3bb3-420a-aa77-b4db537cb354"
                     },
                     "TOTAL"
                   ]
@@ -1081,13 +1081,13 @@
                     [
                       "=",
                       {
-                        "lib/uuid": "edaaf6b0-05be-40c7-8570-40e5bbc9c842"
+                        "lib/uuid": "4a18f372-6260-43a4-ae80-dc9f677b78c2"
                       },
                       [
                         "field",
                         {
                           "base-type": "type/Integer",
-                          "lib/uuid": "a8c4f293-f522-48b1-b7fe-3cc72c33f82b"
+                          "lib/uuid": "b839c0f3-5767-49c5-b65e-0bfec12c36cc"
                         },
                         "PRODUCT_ID"
                       ],
@@ -1096,7 +1096,7 @@
                         {
                           "base-type": "type/BigInteger",
                           "join-alias": "Products",
-                          "lib/uuid": "3e24032a-4486-4db5-b8f6-d4f1c57c5d94",
+                          "lib/uuid": "7bc01f59-5222-4530-a20f-caf8b9e4a856",
                           "effective-type": "type/BigInteger"
                         },
                         8
@@ -1111,7 +1111,7 @@
                     }
                   ],
                   "lib/options": {
-                    "lib/uuid": "e763246b-7f8c-44e6-b671-a253b9261f9a"
+                    "lib/uuid": "78842d4f-6023-428e-aa47-f61ceac5ca3e"
                   }
                 }
               ],
@@ -1119,7 +1119,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "90b47c0f-d022-4a35-add9-494ce6b64c90"
+                    "lib/uuid": "2e827e79-3558-4d17-ba42-092b34d723be"
                   }
                 ]
               ],
@@ -1128,7 +1128,7 @@
                   "field",
                   {
                     "base-type": "type/BigInteger",
-                    "lib/uuid": "343c8042-8ba5-465e-9f11-47609e6350f8"
+                    "lib/uuid": "e17dd3a3-b0ad-4e5f-bc00-95c35b319a37"
                   },
                   "Age"
                 ],
@@ -1137,7 +1137,7 @@
                   {
                     "base-type": "type/Text",
                     "join-alias": "Products",
-                    "lib/uuid": "8b4985e3-82b7-46f4-8748-0ecb6245badb",
+                    "lib/uuid": "d8769dbd-ba6c-4676-a099-76250fa8d2ee",
                     "effective-type": "type/Text"
                   },
                   18
@@ -1472,20 +1472,20 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "e1d6ac65-c29e-4834-a463-403d75db4728"
+                    "lib/uuid": "35ca490c-ed2f-4f44-99a5-c593a97cb2cc"
                   },
                   9
                 ],
                 [
                   "sum",
                   {
-                    "lib/uuid": "533be8ff-861b-49e1-8b49-a298da2d5628"
+                    "lib/uuid": "2a07be90-3841-44a3-a7af-5dc4273f952c"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Integer",
-                      "lib/uuid": "0f406d3a-67a8-4206-ac52-5458119411fc",
+                      "lib/uuid": "5f8ca469-7f5e-4536-98a7-aab6cc744e38",
                       "effective-type": "type/Integer"
                     },
                     2
@@ -1494,13 +1494,13 @@
                 [
                   "sum",
                   {
-                    "lib/uuid": "1f93c289-583c-4431-aacc-5ea0db93c6d3"
+                    "lib/uuid": "52fae554-5a0f-4c35-a6af-4320ead61a03"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "7be3846c-73dc-4a76-8ddd-40b44f277926",
+                      "lib/uuid": "10d8a8f2-2425-4580-bfea-6a13c47f80eb",
                       "effective-type": "type/Float"
                     },
                     3
@@ -1509,7 +1509,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "9fdf4cd6-0163-4a8e-9a1f-6ad7fbfb0857"
+                    "lib/uuid": "891bf490-5116-4336-96ca-1d036b5409da"
                   }
                 ]
               ],
@@ -1519,7 +1519,7 @@
                   {
                     "base-type": "type/DateTime",
                     "temporal-unit": "quarter",
-                    "lib/uuid": "f47a1b79-1c5d-42c9-8dd0-b3b4515d54fe",
+                    "lib/uuid": "bf9681e9-7c74-42d2-b601-a884a3ed7598",
                     "effective-type": "type/DateTime"
                   },
                   13
@@ -1529,7 +1529,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "b309574c-3d7d-42e2-b1a3-37a41e1a876e",
+                    "lib/uuid": "246d058f-0d8f-479e-86b6-3d25d10abb8b",
                     "effective-type": "type/Text"
                   },
                   18
@@ -1541,13 +1541,13 @@
                   "time-interval",
                   {
                     "include-current": true,
-                    "lib/uuid": "4be1594c-cd8a-4db1-b519-caba7598f243"
+                    "lib/uuid": "20d5747a-72b7-421c-9330-df7174accf17"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "9ab02395-ef6d-43ec-a7b8-0cf5196ab57c",
+                      "lib/uuid": "e9c9bd78-59e0-4db3-ac25-fe9738aa203c",
                       "effective-type": "type/DateTime"
                     },
                     13
@@ -1856,7 +1856,7 @@
                   {
                     "base-type": "type/DateTime",
                     "temporal-unit": "quarter",
-                    "lib/uuid": "39d94a9a-d04d-40d5-a787-3bcaebf2fea9",
+                    "lib/uuid": "56973b58-c1f8-4894-8d8a-193118f8df84",
                     "effective-type": "type/DateTime"
                   },
                   13
@@ -1866,7 +1866,7 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "d31c0270-f51a-4b32-b276-91fe6be67fcf"
+                    "lib/uuid": "a9db1699-c3fc-4e7e-aec0-effbdcf3dd78"
                   },
                   9
                 ]
@@ -2068,7 +2068,7 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "f5dd981a-450f-4f54-88f4-323e059bb72d"
+                    "lib/uuid": "eeb515e2-67e3-48cf-a005-4ba7cc72d2f9"
                   },
                   9
                 ]
@@ -2078,13 +2078,13 @@
                 [
                   "time-interval",
                   {
-                    "lib/uuid": "10fb4dcd-f6a8-47fe-a330-fd28a6d8be79"
+                    "lib/uuid": "c4313d62-f78b-4924-aa3d-8cbfa59ec67f"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "afee78af-21f2-479e-ba00-3157ddb7849f",
+                      "lib/uuid": "4be714af-4622-46d1-b4d5-6aedd8b70d70",
                       "effective-type": "type/DateTime"
                     },
                     13
@@ -2457,20 +2457,20 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "4aaca271-b833-4e13-a03b-eea20faf4a82"
+                    "lib/uuid": "c41f49b1-d596-4aa7-bf51-f88c04a6f09a"
                   },
                   9
                 ],
                 [
                   "avg",
                   {
-                    "lib/uuid": "3f88ef13-46f3-4f49-b4d7-5c37637c1e24"
+                    "lib/uuid": "8b0bb0ff-decd-48e5-9593-b19bc1a63dbd"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "ac447be6-e5b1-49aa-bef1-99e6d1b7466d",
+                      "lib/uuid": "fa0979a8-409c-46a5-8c03-e95bc7377753",
                       "effective-type": "type/Float"
                     },
                     5
@@ -2479,13 +2479,13 @@
                 [
                   "max",
                   {
-                    "lib/uuid": "d7c0b92e-1b53-4841-930f-c36e3799d97b"
+                    "lib/uuid": "6a4c8d06-9769-4bac-88e4-512d9ac340d9"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "e7f94b78-9cea-448b-81cc-583840bcb992",
+                      "lib/uuid": "21256ded-2a14-4826-a53e-789f63025b7a",
                       "effective-type": "type/Float"
                     },
                     5
@@ -2494,13 +2494,13 @@
                 [
                   "sum",
                   {
-                    "lib/uuid": "c0d2e783-78c8-4cc9-995e-7873a241a00c"
+                    "lib/uuid": "298027d1-cd8e-4bc7-9e99-4b44fd37b890"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "649ebcdb-93f4-48c6-ba9f-e96f11073b7b",
+                      "lib/uuid": "b067eaaf-e751-4985-850a-d4b56e55b67b",
                       "effective-type": "type/Float"
                     },
                     3
@@ -2514,7 +2514,7 @@
                     "temporal-unit": "month",
                     "base-type": "type/DateTime",
                     "original-temporal-unit": "quarter",
-                    "lib/uuid": "aa99033d-0735-4f13-aa93-3c773a756e06",
+                    "lib/uuid": "9a3b4090-3b27-497b-aaca-3addec0336da",
                     "effective-type": "type/DateTime"
                   },
                   13
@@ -2524,7 +2524,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "83bebfba-f764-4217-ab18-f1a56606a71c",
+                    "lib/uuid": "84542815-5250-4307-b353-d3d16523a025",
                     "effective-type": "type/Text"
                   },
                   18
@@ -2535,13 +2535,13 @@
                 [
                   "time-interval",
                   {
-                    "lib/uuid": "d3b3be75-98e1-4309-83ba-b55eab0f82bb"
+                    "lib/uuid": "7479e50c-5518-49c1-ae69-3b11a4dbd2f5"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "4b2c377e-374f-46da-96f7-8605b9f5204f",
+                      "lib/uuid": "ab987896-a024-4ba0-8a69-47185ca9b4cc",
                       "effective-type": "type/DateTime"
                     },
                     13
@@ -2880,7 +2880,7 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "7bea8c3a-96f8-466d-9ab3-389ee86953e5"
+                    "lib/uuid": "cdd21212-6ecd-4752-a920-317f39685730"
                   },
                   9
                 ]
@@ -2891,7 +2891,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 11,
-                    "lib/uuid": "594dd1bf-6fcd-4c48-8ce1-dacb3c2057d8",
+                    "lib/uuid": "cfcbd411-f113-40a0-b708-0f94025f7a0d",
                     "effective-type": "type/Text"
                   },
                   30
@@ -2901,7 +2901,7 @@
                   {
                     "base-type": "type/DateTime",
                     "temporal-unit": "quarter",
-                    "lib/uuid": "555f9d1c-db92-4425-89a7-bc6f17d73c4c",
+                    "lib/uuid": "511ec053-6cf5-46e8-9b20-8570c6ed1ed2",
                     "effective-type": "type/DateTime"
                   },
                   13
@@ -2913,13 +2913,13 @@
                   "time-interval",
                   {
                     "include-current": true,
-                    "lib/uuid": "367d0241-d95a-4a01-b8c6-4e60be17abcd"
+                    "lib/uuid": "a33452b0-8018-4535-b342-3c044430c7a6"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "4afe757f-f494-44db-82d3-c5df859e18b6",
+                      "lib/uuid": "1f756cd9-89c1-4c9e-ac35-1959b436fdbb",
                       "effective-type": "type/DateTime"
                     },
                     13
@@ -3211,7 +3211,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "2176fbd2-a37f-4dda-b4e6-7ac5df132f1b",
+                    "lib/uuid": "0204a201-e2ea-4bf6-94eb-72f1edd7dc1c",
                     "effective-type": "type/Text"
                   },
                   18
@@ -3221,7 +3221,7 @@
                 [
                   "metric",
                   {
-                    "lib/uuid": "c03fff75-87f9-425e-a3f9-b6948fcc9b5b"
+                    "lib/uuid": "12a536f1-27a0-4a63-bf99-90ffe8708eed"
                   },
                   19
                 ]
@@ -3500,7 +3500,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "019bfae8-d407-4aa6-aff5-f24ba9cabdd5",
+                    "lib/uuid": "86f50134-5e37-4401-a7d3-f83c80b38971",
                     "effective-type": "type/Text"
                   },
                   17
@@ -3510,7 +3510,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "cf935237-340a-4fdc-8daf-9304a11e756a",
+                    "lib/uuid": "cf19351a-7ad2-4697-a5e9-2496efc596e4",
                     "effective-type": "type/Text"
                   },
                   18
@@ -3520,7 +3520,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "10c97ce9-4a0d-4d9c-af74-68d1ae4b304a"
+                    "lib/uuid": "ba8cd679-f845-4456-8b26-7a2dc3551260"
                   }
                 ]
               ],
@@ -3532,13 +3532,13 @@
                 [
                   ">=",
                   {
-                    "lib/uuid": "64f54b2c-71ac-4607-8d67-742da0d79c65"
+                    "lib/uuid": "a519a6b1-5c94-47e3-bc66-a31a19f7d8db"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Integer",
-                      "lib/uuid": "cc35a0bb-1e3b-4290-b66b-6ceb196225ea"
+                      "lib/uuid": "821f6776-a1c8-465b-9efc-b7b1f680952c"
                     },
                     "count"
                   ],
@@ -3912,7 +3912,7 @@
                   {
                     "base-type": "type/DateTime",
                     "temporal-unit": "quarter",
-                    "lib/uuid": "de57770a-37e3-4324-9121-b2f56f02f573",
+                    "lib/uuid": "76662399-fc77-44a9-938a-4cf73d74d692",
                     "effective-type": "type/DateTime"
                   },
                   13
@@ -3924,7 +3924,7 @@
                     "binning": {
                       "strategy": "default"
                     },
-                    "lib/uuid": "e310ec1b-e0e6-4402-b5db-e10b8342836e",
+                    "lib/uuid": "43202ee1-7888-4848-bb54-db7631d97493",
                     "effective-type": "type/Integer"
                   },
                   2
@@ -3934,7 +3934,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "12935499-3128-42df-868a-ff39855cbce9",
+                    "lib/uuid": "abce9554-a9cb-4812-8f43-256bd8afabdc",
                     "effective-type": "type/Text"
                   },
                   18
@@ -3944,13 +3944,13 @@
                 [
                   "sum",
                   {
-                    "lib/uuid": "74743581-3e32-48e8-aad9-8e43654626d5"
+                    "lib/uuid": "fb3c06df-6178-44a5-81f4-ed018aa43cc3"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "89f91120-92ec-4488-a48a-77df50fb7458",
+                      "lib/uuid": "e0086b58-fd60-4920-8dd1-26f7bb54484a",
                       "effective-type": "type/Float"
                     },
                     5
@@ -3959,13 +3959,13 @@
                 [
                   "sum",
                   {
-                    "lib/uuid": "28f7b118-14ac-4c0e-a0a5-bee7210556dc"
+                    "lib/uuid": "7d7dd37a-9532-4a72-95a1-f803cb9a9f31"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Float",
-                      "lib/uuid": "e6da2aca-3110-4edd-906c-0f8a6d4b9ec6",
+                      "lib/uuid": "63e63632-23c3-47d8-8bbd-7c9f672219a0",
                       "effective-type": "type/Float"
                     },
                     3
@@ -3974,7 +3974,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "cb0f9803-abee-4ca8-8d45-1a124997cbf3"
+                    "lib/uuid": "de997712-48c9-436e-b2f7-8aa9c7f281e1"
                   }
                 ]
               ],
@@ -4234,7 +4234,7 @@
                 [
                   "desc",
                   {
-                    "lib/uuid": "eee61b83-fa5e-4923-b7a5-9fd11524d846"
+                    "lib/uuid": "6901dfc4-576a-498c-a964-091b032aecc4"
                   },
                   [
                     "field",
@@ -4244,7 +4244,7 @@
                       "binning": {
                         "strategy": "default"
                       },
-                      "lib/uuid": "9737c5dd-b781-4339-bb4a-3caa91b353e4",
+                      "lib/uuid": "19af4d9c-7636-4a1c-898f-c7c67e14e912",
                       "effective-type": "type/Float"
                     },
                     16
@@ -4255,7 +4255,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "c7886207-2719-484d-8e92-034664156f4b"
+                    "lib/uuid": "72554e2f-59ae-4fa1-b4ed-2b13a67053db"
                   }
                 ]
               ],
@@ -4265,7 +4265,7 @@
                   {
                     "base-type": "type/Float",
                     "source-field": 14,
-                    "lib/uuid": "18e1e13d-ecd0-4c79-ab07-bd6f0f04e523",
+                    "lib/uuid": "cef2016b-2965-4202-b7b9-b29def6b2f2f",
                     "effective-type": "type/Float"
                   },
                   16
@@ -4275,7 +4275,7 @@
                   {
                     "base-type": "type/Text",
                     "source-field": 14,
-                    "lib/uuid": "ad756c53-b937-4c57-8905-b70b5c34ff54",
+                    "lib/uuid": "2b895e8c-ac2a-4e75-9c6c-f2db723dcf3e",
                     "effective-type": "type/Text"
                   },
                   18
@@ -4286,14 +4286,14 @@
                 [
                   "!=",
                   {
-                    "lib/uuid": "f18aa105-3b6b-4328-980d-e50bc156d54f"
+                    "lib/uuid": "227a0e5c-609b-4268-8e60-5b0922462cec"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Text",
                       "source-field": 14,
-                      "lib/uuid": "10614418-c171-4919-ac83-413bf0959c65",
+                      "lib/uuid": "64651707-3320-47d1-b4c0-c89471c50425",
                       "effective-type": "type/Text"
                     },
                     17
@@ -4618,13 +4618,13 @@
                 [
                   "desc",
                   {
-                    "lib/uuid": "237b1ff8-3dc5-4ef9-b5a0-eaf779adf8fd"
+                    "lib/uuid": "1df170ea-a0b0-4853-80e6-d61779144655"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "4a6bf933-3d18-4c47-95e3-dc869ef9bc21",
+                      "lib/uuid": "84e900c6-bed5-41a6-b686-74e47c239a4c",
                       "effective-type": "type/DateTime"
                     },
                     27
@@ -4636,13 +4636,13 @@
                 [
                   "time-interval",
                   {
-                    "lib/uuid": "162f4bb5-ac0e-41d7-8ffe-dc622cc0db91"
+                    "lib/uuid": "eff00564-c244-4782-a518-0b4d83c20088"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "77a89e7d-b143-42c9-b005-b48d178edfeb",
+                      "lib/uuid": "4d6dfd6a-0518-4dc8-849b-466fa062aa18",
                       "effective-type": "type/DateTime"
                     },
                     27
@@ -4848,7 +4848,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "a0393dfa-fcb9-4260-8076-26e46e03a90f",
+                    "lib/uuid": "d76738ef-52b7-452d-8081-b9d12625cced",
                     "effective-type": "type/Text"
                   },
                   29
@@ -4858,7 +4858,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "bc250773-adba-4c94-941e-31080bae2689"
+                    "lib/uuid": "509644a4-a5a0-40e3-b02e-7b1ba3608a00"
                   }
                 ]
               ],
@@ -4870,13 +4870,13 @@
                 [
                   "not-empty",
                   {
-                    "lib/uuid": "7f18d282-ca3a-45bd-8243-b177faf2f888"
+                    "lib/uuid": "af1f29c9-c4a4-469f-9960-bf3575a067c9"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Text",
-                      "lib/uuid": "32e730ee-f592-46d0-8ebd-7a7bd67c7135"
+                      "lib/uuid": "50809aff-6a24-4558-9c24-831c9d8def84"
                     },
                     "BUTTON_LABEL"
                   ]
@@ -5045,7 +5045,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "7e7ab937-ac9d-4c79-8487-7959c8170b82",
+                    "lib/uuid": "35664c81-f50f-4a7c-9049-77ad2d1d5475",
                     "effective-type": "type/Text"
                   },
                   29
@@ -5055,7 +5055,7 @@
                   {
                     "base-type": "type/DateTime",
                     "temporal-unit": "month",
-                    "lib/uuid": "7c705857-56a4-4699-9e42-103f978a0227",
+                    "lib/uuid": "7a9ab737-e8ae-44d8-b2f2-8d17e324ed49",
                     "effective-type": "type/DateTime"
                   },
                   35
@@ -5065,7 +5065,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "e588ef08-c3ff-4757-a684-59903f62d0fc"
+                    "lib/uuid": "63dffcac-d534-4422-9fce-daf827b189ea"
                   }
                 ]
               ],
@@ -5077,13 +5077,13 @@
                 [
                   "=",
                   {
-                    "lib/uuid": "9c400345-4984-48e5-9102-97603b24c19a"
+                    "lib/uuid": "8398adb6-6324-45c5-9897-55069e753ad5"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Text",
-                      "lib/uuid": "fba19518-9df2-488a-9b0e-5e3f3d0dbdcc"
+                      "lib/uuid": "279e2fca-179c-4510-b918-9e104e457dce"
                     },
                     "BUTTON_LABEL"
                   ],
@@ -5411,13 +5411,13 @@
                 [
                   "desc",
                   {
-                    "lib/uuid": "f001fd10-c37c-4593-aa6f-6567faad83f8"
+                    "lib/uuid": "5c520587-8bc9-4cbe-9c5f-19220d96e9d5"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "2feae752-901f-448b-8b64-91237c0bf6c2",
+                      "lib/uuid": "934026b3-7465-4a8d-984a-802ab0fa8197",
                       "effective-type": "type/DateTime"
                     },
                     31
@@ -5429,7 +5429,7 @@
                   "field",
                   {
                     "base-type": "type/BigInteger",
-                    "lib/uuid": "0980b5cd-65b3-4f93-ae2a-890e75e79329",
+                    "lib/uuid": "d76bd8e3-f99b-4f47-b85b-fb59cafc93e1",
                     "effective-type": "type/BigInteger"
                   },
                   24
@@ -5438,7 +5438,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "55d20afe-40fb-479a-8b18-580ef681daf9",
+                    "lib/uuid": "abc89767-f768-4ec4-b722-7edef78a462f",
                     "effective-type": "type/Text"
                   },
                   37
@@ -5447,7 +5447,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "3021c09f-bc87-4e33-b229-2ffa593b9a15",
+                    "lib/uuid": "786a1b5d-df94-4885-9837-524a8f814d19",
                     "effective-type": "type/Text"
                   },
                   36
@@ -5456,7 +5456,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "f63402f9-7877-4b78-9793-5e2b89c484f4",
+                    "lib/uuid": "a8f196e6-eec2-4e7f-823c-3b362d06bf0b",
                     "effective-type": "type/Text"
                   },
                   43
@@ -5465,7 +5465,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "61490e4a-9081-4309-9505-716a2fa6e646",
+                    "lib/uuid": "7028c881-febc-45b5-bf5f-708d381818d0",
                     "effective-type": "type/Text"
                   },
                   41
@@ -5474,7 +5474,7 @@
                   "field",
                   {
                     "base-type": "type/DateTime",
-                    "lib/uuid": "87d0ee7b-ff8e-4601-94c4-a1b4f51dd439",
+                    "lib/uuid": "c337c7f4-2ac7-4e4a-81af-4c7698d69d06",
                     "effective-type": "type/DateTime"
                   },
                   31
@@ -5483,7 +5483,7 @@
                   "field",
                   {
                     "base-type": "type/DateTime",
-                    "lib/uuid": "1e1e6409-0c5a-4507-b7e1-a8cec08727e5",
+                    "lib/uuid": "a8447eae-3a28-43a5-88ea-010033693579",
                     "effective-type": "type/DateTime"
                   },
                   40
@@ -5492,7 +5492,7 @@
                   "field",
                   {
                     "base-type": "type/DateTime",
-                    "lib/uuid": "2e233b1d-de9e-4cfc-af17-b43a67d92d25",
+                    "lib/uuid": "5bf41b9f-9382-4802-a96c-6ab99e44b73a",
                     "effective-type": "type/DateTime"
                   },
                   39
@@ -5501,7 +5501,7 @@
                   "field",
                   {
                     "base-type": "type/Boolean",
-                    "lib/uuid": "8e57e653-6607-4420-a6eb-90e137efd0d2",
+                    "lib/uuid": "dd2ae0f1-d8db-4f69-bde6-398fb5b20756",
                     "effective-type": "type/Boolean"
                   },
                   38
@@ -5510,7 +5510,7 @@
                   "field",
                   {
                     "base-type": "type/Boolean",
-                    "lib/uuid": "0a10ad8c-f3a4-4fe0-89cc-d52e574fbe37",
+                    "lib/uuid": "d7348ddd-3b60-4da1-9a7f-8d2777cb6f87",
                     "effective-type": "type/Boolean"
                   },
                   42
@@ -5521,13 +5521,13 @@
                 [
                   "time-interval",
                   {
-                    "lib/uuid": "047eb081-2549-48cb-8722-11db9896c5bd"
+                    "lib/uuid": "ff1594f2-65f8-430e-ab64-4931eee9e4cd"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
-                      "lib/uuid": "a72dd3bb-6b31-4afc-b20d-62dd93e5c334",
+                      "lib/uuid": "3e165582-f756-4fed-9a0b-686ca140b07b",
                       "effective-type": "type/DateTime"
                     },
                     31
@@ -5783,7 +5783,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "84296111-a383-429e-9ead-b70766760258",
+                    "lib/uuid": "60ffac6a-aff6-4520-8fd7-6875a313bf9a",
                     "effective-type": "type/Text"
                   },
                   29
@@ -5792,7 +5792,7 @@
                   "field",
                   {
                     "base-type": "type/Text",
-                    "lib/uuid": "70a17b9f-dcf6-4332-92d3-41b306192329",
+                    "lib/uuid": "79dccb7a-31d3-4748-9910-963a81dec72d",
                     "effective-type": "type/Text"
                   },
                   32
@@ -5802,7 +5802,7 @@
                 [
                   "count",
                   {
-                    "lib/uuid": "a29b84fa-3cfa-4a4a-8c87-36c7d7966474"
+                    "lib/uuid": "cbd30bfd-dafc-4ef0-9e2b-66488ce6d568"
                   }
                 ]
               ],
@@ -5814,7 +5814,7 @@
                 [
                   "case",
                   {
-                    "lib/uuid": "b8ca8ab1-d376-4c9e-b716-d502bc0e84b8",
+                    "lib/uuid": "c158a994-2a10-4e58-b3f8-a18e59c2ff22",
                     "lib/expression-name": "Step"
                   },
                   [
@@ -5822,13 +5822,13 @@
                       [
                         "is-null",
                         {
-                          "lib/uuid": "482c764c-9911-4007-9fb4-cc5f2bd4a7e6"
+                          "lib/uuid": "4526dbdb-d0ec-4125-9691-ae3df9ca66b5"
                         },
                         [
                           "field",
                           {
                             "base-type": "type/Text",
-                            "lib/uuid": "331b7274-c3f1-4a2a-bcc1-acd2c035079b"
+                            "lib/uuid": "de1b15fc-dd3e-498c-b534-9ce465a37d5d"
                           },
                           "BUTTON_LABEL"
                         ]
@@ -5840,7 +5840,7 @@
                     "field",
                     {
                       "base-type": "type/Text",
-                      "lib/uuid": "80ac2c93-abb6-45f9-9a7f-a1cd31b6aace"
+                      "lib/uuid": "49464a4c-5e78-462b-aae2-087199c3c963"
                     },
                     "BUTTON_LABEL"
                   ]
@@ -5850,13 +5850,13 @@
                 [
                   "!=",
                   {
-                    "lib/uuid": "ad053211-7097-4658-be8a-61af1039716a"
+                    "lib/uuid": "71b14cce-0f8d-467b-9d84-75f1cdc3aef2"
                   },
                   [
                     "expression",
                     {
                       "base-type": "type/Text",
-                      "lib/uuid": "352374e7-8e55-493b-b098-b7ffaa6876f9"
+                      "lib/uuid": "dee0e2ce-f97e-488c-bdf7-c210e1329757"
                     },
                     "Step"
                   ],
@@ -6084,7 +6084,7 @@
                     "temporal-unit": "year",
                     "base-type": "type/DateTime",
                     "original-temporal-unit": "month",
-                    "lib/uuid": "1347c78c-31ff-4bec-8000-aa4abc3ad7ca",
+                    "lib/uuid": "b683c377-b542-472b-bccb-9fe2dff3b19e",
                     "effective-type": "type/DateTime"
                   },
                   31
@@ -6094,13 +6094,13 @@
                 [
                   "sum",
                   {
-                    "lib/uuid": "771936cf-ed9d-49f3-a3c2-08c7808107ee"
+                    "lib/uuid": "1254f291-f7a2-480f-94ff-2cdf8f12e10e"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/Integer",
-                      "lib/uuid": "4b7f82dc-8809-40d5-87b8-25842f5ed0d3",
+                      "lib/uuid": "f817a9ba-fb78-47f6-bc19-25b53bed37c9",
                       "effective-type": "type/Integer"
                     },
                     33
@@ -6116,14 +6116,14 @@
                   "time-interval",
                   {
                     "include-current": true,
-                    "lib/uuid": "07419de9-4377-4083-b0c3-636a854c8862"
+                    "lib/uuid": "cd88f896-3334-45ec-8374-648409a8ed3f"
                   },
                   [
                     "field",
                     {
                       "base-type": "type/DateTime",
                       "inherited-temporal-unit": "year",
-                      "lib/uuid": "1c1bd49a-8f9f-43d6-be7c-654f9b7e0a2e"
+                      "lib/uuid": "09a40f65-e946-4e48-8bbf-67b0d69b0395"
                     },
                     "CREATED_AT"
                   ],

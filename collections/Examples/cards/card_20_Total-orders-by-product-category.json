@@ -136,7 +136,7 @@
             {
               "base-type": "type/Text",
               "source-field": 14,
-              "lib/uuid": "d01be3d0-9f9e-42ef-b427-118155051572",
+              "lib/uuid": "a1fef892-41ee-44d9-b235-da67e3dd35c3",
               "effective-type": "type/Text"
             },
             18
@@ -146,7 +146,7 @@
           [
             "metric",
             {
-              "lib/uuid": "b8968bfa-0395-464c-b53f-5e4d969b253d"
+              "lib/uuid": "9241fbe9-2425-460b-999c-8cc32c546f29"
             },
             19
           ]

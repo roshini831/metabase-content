@@ -280,20 +280,20 @@
           [
             "metric",
             {
-              "lib/uuid": "f3ab4e96-5d51-47c4-8014-c1eaaee5db6b"
+              "lib/uuid": "7d007511-0b97-4226-81f7-3e1a98943d67"
             },
             9
           ],
           [
             "sum",
             {
-              "lib/uuid": "ca9a0087-97da-4880-9ff4-a61b0a3e580d"
+              "lib/uuid": "0c03d4cc-58e4-4df0-a02c-25ca13d76415"
             },
             [
               "field",
               {
                 "base-type": "type/Integer",
-                "lib/uuid": "1f6e3f5f-3235-4b0a-88c1-c10d742198fc",
+                "lib/uuid": "6086ebc8-41cb-499c-b52f-170744404785",
                 "effective-type": "type/Integer"
               },
               2
@@ -302,13 +302,13 @@
           [
             "sum",
             {
-              "lib/uuid": "d0edad4e-7d2b-4e42-a91a-47379e79733a"
+              "lib/uuid": "55e88627-9bb6-4742-b9fc-9e3471b2fedd"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "c565198a-5286-4c6f-950e-87661362ad6b",
+                "lib/uuid": "feb415f3-03aa-4213-bb45-6588e899d58f",
                 "effective-type": "type/Float"
               },
               3
@@ -317,7 +317,7 @@
           [
             "count",
             {
-              "lib/uuid": "3e769e72-4835-42ad-beb7-02b75bf46fbc"
+              "lib/uuid": "4a36aaab-0aab-4346-8dbe-3663de6e80df"
             }
           ]
         ],
@@ -327,7 +327,7 @@
             {
               "base-type": "type/DateTime",
               "temporal-unit": "quarter",
-              "lib/uuid": "8407e012-27a4-4875-951e-76475f566a45",
+              "lib/uuid": "51f70f53-9f08-454b-adc1-18cab05e08e0",
               "effective-type": "type/DateTime"
             },
             13
@@ -337,7 +337,7 @@
             {
               "base-type": "type/Text",
               "source-field": 14,
-              "lib/uuid": "676bd2c3-04c5-45ae-80ba-d43c085efe3c",
+              "lib/uuid": "cbf8798e-4b05-40f0-aeaa-b2b985e63689",
               "effective-type": "type/Text"
             },
             18
@@ -349,13 +349,13 @@
             "time-interval",
             {
               "include-current": true,
-              "lib/uuid": "23a5b1ab-a532-4219-b54b-55a495bd216f"
+              "lib/uuid": "f2e80b0d-1099-4914-986c-159fb97dfaf5"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "cb0677cc-a1d1-4567-ab1b-6ea2b154f41c",
+                "lib/uuid": "3f143678-243a-4a64-8ad2-fba47eca68ea",
                 "effective-type": "type/DateTime"
               },
               13

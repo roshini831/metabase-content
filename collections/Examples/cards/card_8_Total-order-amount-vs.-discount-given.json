@@ -168,7 +168,7 @@
             {
               "base-type": "type/DateTime",
               "temporal-unit": "quarter",
-              "lib/uuid": "a23a54f1-2027-4700-9a59-bfb489031967",
+              "lib/uuid": "825df256-8f1d-4638-baea-2c60bcfe4c08",
               "effective-type": "type/DateTime"
             },
             13
@@ -180,7 +180,7 @@
               "binning": {
                 "strategy": "default"
               },
-              "lib/uuid": "325a0e10-4ffa-4400-8f55-29ed2b5373c3",
+              "lib/uuid": "75aca7c4-972e-4c7a-83c3-8a9685617721",
               "effective-type": "type/Integer"
             },
             2
@@ -190,7 +190,7 @@
             {
               "base-type": "type/Text",
               "source-field": 14,
-              "lib/uuid": "e4fe6b34-edd6-43af-98af-174f0dfffae8",
+              "lib/uuid": "bbe5e735-088c-4eb4-9ef2-3d7b248ef3d0",
               "effective-type": "type/Text"
             },
             18
@@ -200,13 +200,13 @@
           [
             "sum",
             {
-              "lib/uuid": "fbcf9120-48c7-4cc4-9f45-33aa41b56528"
+              "lib/uuid": "04c6d012-d9b3-446c-8075-ab6db1125e41"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "ee4846d9-54bb-489b-a4fb-5889ef685d03",
+                "lib/uuid": "999caea4-4086-427c-94d4-e40e90830d9b",
                 "effective-type": "type/Float"
               },
               5
@@ -215,13 +215,13 @@
           [
             "sum",
             {
-              "lib/uuid": "87c24e82-7c77-454b-9232-0965ddd403de"
+              "lib/uuid": "4918d4ab-5245-4ef6-8e64-edce250216dd"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "4eabbc56-41e0-4acd-a8ad-71f9f68c230c",
+                "lib/uuid": "6cb9d01b-7777-42e3-aa9f-d38cb9ecdaf5",
                 "effective-type": "type/Float"
               },
               3
@@ -230,7 +230,7 @@
           [
             "count",
             {
-              "lib/uuid": "98ba3971-2e5a-4112-866d-7fd32b335719"
+              "lib/uuid": "8e369961-bf3e-475f-a877-a9d3b127a28a"
             }
           ]
         ],

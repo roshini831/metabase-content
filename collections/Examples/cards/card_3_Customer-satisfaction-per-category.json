@@ -108,7 +108,7 @@
           [
             "desc",
             {
-              "lib/uuid": "7d169994-0d0f-4059-99cd-6afa195867fd"
+              "lib/uuid": "b12c59b7-7642-4f97-a01a-15a98ed51656"
             },
             [
               "field",
@@ -118,7 +118,7 @@
                 "binning": {
                   "strategy": "default"
                 },
-                "lib/uuid": "0daaf609-be84-418b-8685-983017bac7d0",
+                "lib/uuid": "3d150d2e-3940-4ed7-acc1-c3032741da8a",
                 "effective-type": "type/Float"
               },
               16
@@ -129,7 +129,7 @@
           [
             "count",
             {
-              "lib/uuid": "1e6e0283-eea9-4235-85bb-218758c57fd4"
+              "lib/uuid": "3dc24e36-b20d-4de4-9dfe-92484e77fdb7"
             }
           ]
         ],
@@ -139,7 +139,7 @@
             {
               "base-type": "type/Float",
               "source-field": 14,
-              "lib/uuid": "b1105c58-ad26-4ee8-9870-7c025cf5fbe0",
+              "lib/uuid": "2513f8f5-01ec-4a3e-b1eb-19d3b46fd2db",
               "effective-type": "type/Float"
             },
             16
@@ -149,7 +149,7 @@
             {
               "base-type": "type/Text",
               "source-field": 14,
-              "lib/uuid": "8d53e9df-92d8-48d8-afb8-f1d693660fcd",
+              "lib/uuid": "27ae6471-7eb5-4005-88ac-6731c2958d0f",
               "effective-type": "type/Text"
             },
             18
@@ -160,14 +160,14 @@
           [
             "!=",
             {
-              "lib/uuid": "35fe7663-a748-4cb4-8202-b4a68a0c8712"
+              "lib/uuid": "2a89078c-b231-4e25-bb19-ee781a4e0f3e"
             },
             [
               "field",
               {
                 "base-type": "type/Text",
                 "source-field": 14,
-                "lib/uuid": "019d77a2-e1e0-44d9-8d72-4429dc318d75",
+                "lib/uuid": "5268e07b-4e06-4512-bbd8-0093fbff844a",
                 "effective-type": "type/Text"
               },
               17

@@ -85,7 +85,7 @@
             "field",
             {
               "base-type": "type/BigInteger",
-              "lib/uuid": "5c4faf08-8369-421e-a50c-5cd05d5f41a3"
+              "lib/uuid": "f3b1c548-48f7-4dc3-aa4a-46ebf1a4d400"
             },
             "Age"
           ]
@@ -94,13 +94,13 @@
           [
             "sum",
             {
-              "lib/uuid": "688f36ec-49f0-453d-bbb0-7aace016cfbf"
+              "lib/uuid": "05d508e6-9095-469f-bddd-61ef25af3985"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "20d6d5e2-445b-4c53-9e2c-990e83cb52eb"
+                "lib/uuid": "6ac7cb61-8701-4bc2-adfb-cdb6a954fa43"
               },
               "TOTAL"
             ]

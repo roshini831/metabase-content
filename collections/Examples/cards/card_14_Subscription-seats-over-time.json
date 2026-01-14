@@ -94,7 +94,7 @@
               "temporal-unit": "year",
               "base-type": "type/DateTime",
               "original-temporal-unit": "month",
-              "lib/uuid": "81b033b7-c5c8-4f6f-9eec-8d15c642fb9f",
+              "lib/uuid": "b5c53a2b-00a0-497a-84e7-35ed13899067",
               "effective-type": "type/DateTime"
             },
             31
@@ -104,13 +104,13 @@
           [
             "sum",
             {
-              "lib/uuid": "9a586d18-b9c5-4ddf-9c65-d6919bff15f6"
+              "lib/uuid": "98e6ffcb-a3a2-46f1-9a5d-baafff0e6154"
             },
             [
               "field",
               {
                 "base-type": "type/Integer",
-                "lib/uuid": "79712efa-42c1-49ff-bf1a-96690808b310",
+                "lib/uuid": "6adc7f84-a892-42ee-840d-65e4531b8ebc",
                 "effective-type": "type/Integer"
               },
               33
@@ -126,14 +126,14 @@
             "time-interval",
             {
               "include-current": true,
-              "lib/uuid": "77c38dbb-0893-4f03-9148-f7d58cdf6467"
+              "lib/uuid": "bd76f2ee-c8ea-4bb2-9fa2-36e042a0a675"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
                 "inherited-temporal-unit": "year",
-                "lib/uuid": "1f1a2b37-4d26-48d3-9a8e-cd7b9ac17246"
+                "lib/uuid": "de92c6ac-7223-4bde-a6bd-274b9cfd4171"
               },
               "CREATED_AT"
             ],

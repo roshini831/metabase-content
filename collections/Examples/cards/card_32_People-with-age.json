@@ -282,14 +282,14 @@
           [
             "datetime-diff",
             {
-              "lib/uuid": "d84a0395-2fcf-4f70-995b-99b1b3d94898",
+              "lib/uuid": "304b5ffc-2b06-4575-abc7-89dfa8528f5f",
               "lib/expression-name": "Age"
             },
             [
               "field",
               {
                 "base-type": "type/Date",
-                "lib/uuid": "3edc37a9-9176-4cf0-8721-0bf1490a4786",
+                "lib/uuid": "84b8359a-97cf-463b-a40c-c8b97c2535d2",
                 "effective-type": "type/Date"
               },
               12
@@ -297,7 +297,7 @@
             [
               "now",
               {
-                "lib/uuid": "66b9e83a-8bb2-4d2d-9192-6840a5d2c0d7"
+                "lib/uuid": "f2c42dd4-85be-49ab-b8d3-83c620cfdb80"
               }
             ],
             "year"

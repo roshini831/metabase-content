@@ -181,13 +181,13 @@
           [
             "desc",
             {
-              "lib/uuid": "d4eaa596-bb3c-4019-9250-6a6dc234cc34"
+              "lib/uuid": "6318f0e0-4f68-478a-b48a-ec23031be68a"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "227c821d-eef0-42ea-9938-2825441a9a97",
+                "lib/uuid": "dafbc30a-beca-4cec-b5d8-aea39318ac51",
                 "effective-type": "type/DateTime"
               },
               27
@@ -199,13 +199,13 @@
           [
             "time-interval",
             {
-              "lib/uuid": "e98ebcb5-830a-4972-a15d-7bcdaff08cde"
+              "lib/uuid": "a5d042db-bd34-4b56-aec0-59a99ebb9eb1"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "fa5c2044-f12a-4324-b90a-de21abb04076",
+                "lib/uuid": "fb54c590-530c-4b46-aeb2-9655bfa9c315",
                 "effective-type": "type/DateTime"
               },
               27

@@ -87,7 +87,7 @@
             "field",
             {
               "base-type": "type/Text",
-              "lib/uuid": "daaad79c-fd89-427e-8f15-8ba9bddd1f79"
+              "lib/uuid": "17dd345c-6c88-4fa7-acaa-6a7bf8e94e96"
             },
             "STATE"
           ]
@@ -96,13 +96,13 @@
           [
             "sum",
             {
-              "lib/uuid": "9c1ec95b-f797-4765-926e-1b88d174cf20"
+              "lib/uuid": "ca687f4f-69aa-4965-98ad-acd1185164f6"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "38b6a18e-1864-4122-a6f2-81e17f6e746a"
+                "lib/uuid": "1c247ea6-073f-4f47-b057-ca120bb7abff"
               },
               "TOTAL"
             ]

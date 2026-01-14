@@ -106,13 +106,13 @@
               [
                 "=",
                 {
-                  "lib/uuid": "362b6e4e-e4fc-4abe-ac57-636b11076050"
+                  "lib/uuid": "3a27cc1c-52cf-4fab-909b-37db5438b690"
                 },
                 [
                   "field",
                   {
                     "base-type": "type/Integer",
-                    "lib/uuid": "7ee6f6d5-b014-4b3f-9b0a-1df4e13aadb1"
+                    "lib/uuid": "b5e911c9-44b3-4b1c-af15-7ef1463021ef"
                   },
                   "PRODUCT_ID"
                 ],
@@ -121,7 +121,7 @@
                   {
                     "base-type": "type/BigInteger",
                     "join-alias": "Products",
-                    "lib/uuid": "c2eaf253-6cdc-4762-8fd8-20cf1c5541e0",
+                    "lib/uuid": "191564f9-0bd6-43eb-81f6-4a3a379e84d9",
                     "effective-type": "type/BigInteger"
                   },
                   8
@@ -136,7 +136,7 @@
               }
             ],
             "lib/options": {
-              "lib/uuid": "70433f95-5f23-4cfa-a5e2-a2ec6396ae0c"
+              "lib/uuid": "e2e2a793-eca0-40f8-bdcb-a1b8da87e493"
             }
           }
         ],
@@ -144,7 +144,7 @@
           [
             "count",
             {
-              "lib/uuid": "7a6986df-4066-42f8-8eca-8bf48797eac3"
+              "lib/uuid": "487ad3cd-97a1-4fc4-93fa-320cbe804939"
             }
           ]
         ],
@@ -153,7 +153,7 @@
             "field",
             {
               "base-type": "type/BigInteger",
-              "lib/uuid": "0bcb444b-89d4-4a61-a359-02608b57bdb8"
+              "lib/uuid": "2dfb047b-e09f-4f3c-97b6-a65cfcbf7e40"
             },
             "Age"
           ],
@@ -162,7 +162,7 @@
             {
               "base-type": "type/Text",
               "join-alias": "Products",
-              "lib/uuid": "b8951713-2aa3-4ef8-a13b-692623843679",
+              "lib/uuid": "95c2a588-6d8a-4251-8eda-899a95d31e6a",
               "effective-type": "type/Text"
             },
             18

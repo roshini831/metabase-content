@@ -93,13 +93,13 @@
           [
             "sum",
             {
-              "lib/uuid": "12213fed-7656-4bd6-8f80-a4a3aa91fc9c"
+              "lib/uuid": "4020eca1-2706-4a55-8b9d-0f3ccc5b3fa8"
             },
             [
               "field",
               {
                 "base-type": "type/Integer",
-                "lib/uuid": "890ec3ef-af4f-4376-bced-a9ba22ad5a4a",
+                "lib/uuid": "c6899687-9d6b-40a6-92b7-4cee1af61c0f",
                 "effective-type": "type/Integer"
               },
               2
@@ -112,7 +112,7 @@
             {
               "base-type": "type/DateTime",
               "temporal-unit": "month",
-              "lib/uuid": "1e82f65f-4651-479a-9e09-e836e4d0c7b7",
+              "lib/uuid": "6e2d2dac-4e7e-4ccf-a260-27189e184861",
               "effective-type": "type/DateTime"
             },
             13
@@ -123,13 +123,13 @@
           [
             "between",
             {
-              "lib/uuid": "b7d2e7fb-1f0d-4e86-bb40-efd6c53ab9fd"
+              "lib/uuid": "696d496c-3f21-4a21-9e1a-4658a1a4d038"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "82e10306-e2ca-450f-8ef1-82c2c78d83e0",
+                "lib/uuid": "e198687c-ddf1-44f0-ad78-57399d208eb8",
                 "effective-type": "type/DateTime"
               },
               13
@@ -140,13 +140,13 @@
           [
             "=",
             {
-              "lib/uuid": "161eb56d-baf4-40c3-a872-08aa58f7dc93"
+              "lib/uuid": "d27efe90-1601-4d65-bb20-dfc08f395eb0"
             },
             [
               "field",
               {
                 "base-type": "type/Integer",
-                "lib/uuid": "0a4c481c-e663-4b2a-a03b-26adfaab27a3",
+                "lib/uuid": "cc3cc26c-c27c-410a-94c6-fbd1e241c656",
                 "effective-type": "type/Integer"
               },
               14

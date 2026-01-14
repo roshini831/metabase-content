@@ -178,7 +178,7 @@
           [
             "metric",
             {
-              "lib/uuid": "9144cb06-7936-45fa-a674-989003bfff27"
+              "lib/uuid": "61939484-6101-4fb6-ba0f-819c27f35011"
             },
             19
           ]
@@ -189,7 +189,7 @@
             {
               "base-type": "type/Text",
               "source-field": 14,
-              "lib/uuid": "ec86ad65-1cfd-459a-b779-629ca83f7543",
+              "lib/uuid": "64f4c62b-e870-4227-961f-d9d3a925846a",
               "effective-type": "type/Text"
             },
             18
@@ -200,7 +200,7 @@
               "temporal-unit": "quarter",
               "base-type": "type/DateTime",
               "original-temporal-unit": "month",
-              "lib/uuid": "46f227d5-44fb-4090-aca8-fd18a2df207e",
+              "lib/uuid": "f73b0d57-6908-4815-b676-79aa7b29d936",
               "effective-type": "type/DateTime"
             },
             13
@@ -212,13 +212,13 @@
             "time-interval",
             {
               "include-current": true,
-              "lib/uuid": "8c650211-5afd-4273-b4ae-adb374205fc6"
+              "lib/uuid": "a3b4944e-d1ec-4ccd-99dc-a635189fc056"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "7ef7c7e3-8fee-4d52-8b2b-4afcba8676af",
+                "lib/uuid": "d2964324-66b7-4cfe-b55a-67c05c8e8cea",
                 "effective-type": "type/DateTime"
               },
               13

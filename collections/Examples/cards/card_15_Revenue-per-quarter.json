@@ -135,7 +135,7 @@
             {
               "base-type": "type/DateTime",
               "temporal-unit": "quarter",
-              "lib/uuid": "cd54a47b-2719-45ad-b4a3-dc8354594875",
+              "lib/uuid": "ccd69ae4-029f-4008-af5d-855de016f70f",
               "effective-type": "type/DateTime"
             },
             13
@@ -145,7 +145,7 @@
           [
             "metric",
             {
-              "lib/uuid": "b9fbd146-66c2-4f85-aed7-d9b6804fd5c6"
+              "lib/uuid": "2816f980-b91d-45ae-86f8-5c8c72836766"
             },
             9
           ]

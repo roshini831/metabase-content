@@ -89,7 +89,7 @@
           [
             "metric",
             {
-              "lib/uuid": "9d1f0d4c-c9b1-440b-959f-1d8e913a0c65"
+              "lib/uuid": "36519213-7de8-48dc-ab2b-94264f0e6cda"
             },
             9
           ]
@@ -99,13 +99,13 @@
           [
             "time-interval",
             {
-              "lib/uuid": "e1635f57-c21e-415d-8802-6804062212d1"
+              "lib/uuid": "6700e2d6-d72c-4f2a-aa87-54470d419cc9"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "256031cf-d32f-4455-8631-aab248d1e1cc",
+                "lib/uuid": "ec467f78-9405-41b7-8afd-f22c1a3a303d",
                 "effective-type": "type/DateTime"
               },
               13

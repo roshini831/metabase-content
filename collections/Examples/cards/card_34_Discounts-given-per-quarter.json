@@ -91,13 +91,13 @@
           [
             "sum",
             {
-              "lib/uuid": "286f83c8-cc63-407e-a995-ade660770207"
+              "lib/uuid": "6171f53e-4d47-4815-97d6-e6cce7af91c3"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "7aaca5bf-183c-470b-ac18-ba637f60fb1d",
+                "lib/uuid": "7d6e49ee-d061-490d-aee4-c59b88f61b17",
                 "effective-type": "type/Float"
               },
               3
@@ -110,7 +110,7 @@
             {
               "base-type": "type/DateTime",
               "temporal-unit": "quarter",
-              "lib/uuid": "e412a267-b5bc-4bd5-a019-69a356c041e7",
+              "lib/uuid": "22a8fde6-40c1-4fc3-babd-89ec85532a51",
               "effective-type": "type/DateTime"
             },
             13
@@ -122,13 +122,13 @@
             "time-interval",
             {
               "include-current": false,
-              "lib/uuid": "d69b30b7-bcce-4ad6-9e88-59cd276dd341"
+              "lib/uuid": "9c351c55-cbc8-45b3-8f71-0996e581f815"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "0b0f61bb-fb1e-4a77-b4ce-aa918eb06d29",
+                "lib/uuid": "6a628c02-68b5-49b0-b787-50edf09d6e48",
                 "effective-type": "type/DateTime"
               },
               13

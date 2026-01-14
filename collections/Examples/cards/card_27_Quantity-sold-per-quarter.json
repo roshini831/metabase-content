@@ -93,13 +93,13 @@
           [
             "sum",
             {
-              "lib/uuid": "8df46348-7bc1-4799-9c82-0f1e4c886ce1"
+              "lib/uuid": "96926ae4-c3e5-4127-a2a6-b4564b1ca1c2"
             },
             [
               "field",
               {
                 "base-type": "type/Integer",
-                "lib/uuid": "7e1d1b10-82ca-40e8-807c-be84a56ce027",
+                "lib/uuid": "855e58a6-dfbe-4d01-ae3c-e0c0c214a2a9",
                 "effective-type": "type/Integer"
               },
               2
@@ -112,7 +112,7 @@
             {
               "base-type": "type/DateTime",
               "temporal-unit": "quarter",
-              "lib/uuid": "35565afc-a2cd-40ee-89db-63a5f98848cc",
+              "lib/uuid": "49d69653-cf9d-4d8e-b583-3644e51aa431",
               "effective-type": "type/DateTime"
             },
             13
@@ -124,13 +124,13 @@
             "time-interval",
             {
               "include-current": false,
-              "lib/uuid": "cd7f8b28-07f9-4107-b8ba-eb508862e1ac"
+              "lib/uuid": "9fc77898-838f-48f2-af69-a087e9261c54"
             },
             [
               "field",
               {
                 "base-type": "type/DateTime",
-                "lib/uuid": "c03411af-f912-4929-84ee-2c8f5b1e5035",
+                "lib/uuid": "9d3d0a6a-f01c-4f31-bab5-8ec2fdf49d03",
                 "effective-type": "type/DateTime"
               },
               13

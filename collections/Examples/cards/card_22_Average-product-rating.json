@@ -67,13 +67,13 @@
           [
             "avg",
             {
-              "lib/uuid": "71fce08f-dd87-4150-a6ad-7e5e3ec32be3"
+              "lib/uuid": "5ebd8ed0-e882-4ea5-8714-fe75a7d5c480"
             },
             [
               "field",
               {
                 "base-type": "type/Float",
-                "lib/uuid": "e9e982eb-fde7-437e-a0ce-80bc5a45657a",
+                "lib/uuid": "8f3bd54a-c5ae-4254-9e71-ca064445f93a",
                 "effective-type": "type/Float"
               },
               16
