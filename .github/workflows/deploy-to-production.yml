@@ -1,0 +1,42 @@
+name: Deploy to Production Metabase
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'collections/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Download Metabase JAR
+        run: |
+          curl -L -o metabase.jar https://downloads.metabase.com/v0.49.6/metabase.jar
+        # NOTE: Update the version to match your Metabase version
+
+      - name: Import to Production Metabase
+        env:
+          MB_DB_TYPE: ${{ secrets.MB_PROD_DB_TYPE }}
+          MB_DB_CONNECTION_URI: ${{ secrets.MB_PROD_DB_CONNECTION_URI }}
+        run: |
+          java -jar metabase.jar import ./collections
+
+      - name: Notify on Success
+        if: success()
+        run: echo "Successfully deployed Metabase content to production!"
+
+      - name: Notify on Failure
+        if: failure()
+        run: echo "Failed to deploy Metabase content to production."

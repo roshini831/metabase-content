@@ -1,0 +1,19 @@
+# Metabase JAR
+metabase.jar
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Local environment
+.env
+.env.local
