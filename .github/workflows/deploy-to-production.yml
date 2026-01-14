@@ -15,23 +15,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          python-version: '3.11'
 
-      - name: Download Metabase JAR
-        run: |
-          curl -L -o metabase.jar https://downloads.metabase.com/v0.58.1/metabase.jar
-        # NOTE: Update the version to match your Metabase version
+      - name: Install Metabase Migration Toolkit
+        run: pip install metabase-migration-toolkit
 
       - name: Import to Production Metabase
         env:
-          MB_DB_TYPE: ${{ secrets.MB_PROD_DB_TYPE }}
-          MB_DB_CONNECTION_URI: ${{ secrets.MB_PROD_DB_CONNECTION_URI }}
+          MB_TARGET_URL: ${{ secrets.MB_PROD_HOST }}
+          MB_TARGET_USERNAME: ${{ secrets.MB_PROD_USER }}
+          MB_TARGET_PASSWORD: ${{ secrets.MB_PROD_PASSWORD }}
         run: |
-          java -jar metabase.jar import ./collections
+          metabase-import \
+            --target-url "$MB_TARGET_URL" \
+            --target-username "$MB_TARGET_USERNAME" \
+            --target-password "$MB_TARGET_PASSWORD" \
+            --import-dir ./collections \
+            --metabase-version v57
 
       - name: Notify on Success
         if: success()

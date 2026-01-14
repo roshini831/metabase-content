@@ -1,46 +1,50 @@
 #!/bin/bash
-# =============================================================================
-# Metabase Import Script
-# Run this to manually import content to a Metabase instance
-# (The GitHub Action handles production imports automatically)
-# =============================================================================
+# Metabase Import Script using Metabase Migration Toolkit (Open Source)
+# This script imports Metabase content using the metabase-import CLI tool
 
 set -e
 
-# Configuration - Update these values
-METABASE_JAR_PATH="${METABASE_JAR_PATH:-./metabase.jar}"
-IMPORT_PATH="${IMPORT_PATH:-./collections}"
-
-# =============================================================================
-# Script
-# =============================================================================
+# Configuration - can be overridden via environment variables
+METABASE_HOST="${METABASE_HOST:-http://localhost:3001}"
+METABASE_USER="${METABASE_USER:-}"
+METABASE_PASSWORD="${METABASE_PASSWORD:-}"
+INPUT_DIR="${INPUT_DIR:-./collections}"
 
 echo "==================================="
-echo "Metabase Import Script"
+echo "Metabase Import Script (Open Source)"
 echo "==================================="
+echo "Target: $METABASE_HOST"
+echo "Input:  $INPUT_DIR"
+echo ""
 
-# Check if metabase.jar exists
-if [ ! -f "$METABASE_JAR_PATH" ]; then
-    echo "Error: Metabase JAR not found at $METABASE_JAR_PATH"
-    echo "Please set METABASE_JAR_PATH environment variable or download metabase.jar"
+# Check if credentials are provided
+if [ -z "$METABASE_USER" ] || [ -z "$METABASE_PASSWORD" ]; then
+    echo "Please set environment variables:"
+    echo "  METABASE_USER=your-email@example.com"
+    echo "  METABASE_PASSWORD=your-password"
+    echo ""
+    echo "Example:"
+    echo "  METABASE_USER=admin@example.com METABASE_PASSWORD=secret ./scripts/import.sh"
     exit 1
 fi
 
-# Check if import path exists
-if [ ! -d "$IMPORT_PATH" ]; then
-    echo "Error: Import path not found: $IMPORT_PATH"
+# Check if input directory exists
+if [ ! -d "$INPUT_DIR" ]; then
+    echo "Error: Input directory '$INPUT_DIR' not found"
     exit 1
 fi
 
-# Build import command
-IMPORT_CMD="java -jar $METABASE_JAR_PATH import $IMPORT_PATH"
-
-echo "Running: $IMPORT_CMD"
+echo "Running import..."
 echo "-----------------------------------"
 
-# Run import
-eval $IMPORT_CMD
+# Run the import using correct CLI options
+metabase-import \
+    --target-url "$METABASE_HOST" \
+    --target-username "$METABASE_USER" \
+    --target-password "$METABASE_PASSWORD" \
+    --import-dir "$INPUT_DIR" \
+    --metabase-version v57
 
 echo "-----------------------------------"
 echo "Import complete!"
-echo "Content imported from: $IMPORT_PATH"
+echo "Content imported to: $METABASE_HOST"

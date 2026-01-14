@@ -1,22 +1,17 @@
-# Metabase Content Repository
+# Metabase Content Version Control
 
-This repository manages Metabase content (dashboards, questions, models, collections) using a git-based workflow for syncing between development and production environments.
+This repository enables Git-based version control for Metabase dashboards, questions, and collections using the **open-source Metabase Migration Toolkit**.
 
-## 🏗️ Architecture
-
-```
-Development Metabase → Export → Git Repo → GitHub Action → Production Metabase
-```
-
-## 📁 Repository Structure
+## 📋 Project Structure
 
 ```
-├── .github/workflows/
-│   └── deploy-to-production.yml  # Auto-deploys on merge to main
-├── collections/                   # Serialized Metabase content (YAML)
+metabase-content/
+├── collections/              # Exported Metabase content (JSON)
 ├── scripts/
-│   ├── export.sh                  # Export from dev Metabase
-│   └── import.sh                  # Manual import script
+│   ├── export.sh            # Export from dev Metabase
+│   └── import.sh            # Manual import script
+├── .github/workflows/
+│   └── deploy-to-production.yml  # Auto-deploy on push to main
 └── README.md
 ```
 
@@ -24,75 +19,64 @@ Development Metabase → Export → Git Repo → GitHub Action → Production Me
 
 ### Prerequisites
 
-- Metabase Pro or Enterprise plan (serialization required)
-- Development and Production Metabase instances (same version)
-- Both instances connected to databases with **same schema and display name**
+- **Two Metabase instances** running:
+  - Development: `http://localhost:3000`
+  - Production: `http://localhost:3001`
+- Python 3.8+ installed
+- The Metabase Migration Toolkit: `pip install metabase-migration-toolkit`
 
-### 1. Configure GitHub Secrets
+### Configure GitHub Secrets
 
-Add these secrets to your repository (Settings → Secrets and variables → Actions):
+Add these secrets in **Settings → Secrets and variables → Actions**:
 
 | Secret | Description |
 |--------|-------------|
-| `MB_PROD_DB_TYPE` | Database type: `postgres` or `mysql` |
-| `MB_PROD_DB_CONNECTION_URI` | Connection string for production Metabase app database |
+| `MB_PROD_HOST` | Production Metabase URL (e.g., `http://your-prod-metabase.com`) |
+| `MB_PROD_USER` | Production Metabase admin email |
+| `MB_PROD_PASSWORD` | Production Metabase admin password |
 
-Example connection URI:
-```
-postgresql://user:password@host:5432/metabase_prod
-```
+## 🚀 Workflow
 
-### 2. Update Workflow Version
+### 1. Export from Development
 
-Edit `.github/workflows/deploy-to-production.yml` and update the Metabase version to match your instances:
-```yaml
-curl -L -o metabase.jar https://downloads.metabase.com/v0.58.1/metabase.jar
-```
+```bash
+cd metabase-content
 
-## 🔄 Workflow
+# Set credentials
+export METABASE_USER="your-email@example.com"
+export METABASE_PASSWORD="your-password"
 
-### Exporting from Development
-
-1. SSH to your development Metabase server
-2. Run the export script:
-   ```bash
-   # Export specific collections
-   COLLECTION_IDS="2,3,4" ./scripts/export.sh
-   
-   # Or export all collections
-   ./scripts/export.sh
-   ```
-3. Commit and push changes:
-   ```bash
-   git add .
-   git commit -m "Update dashboards"
-   git push origin feature-branch
-   ```
-
-### Deploying to Production
-
-1. Create a Pull Request from your feature branch
-2. Review the YAML changes
-3. Merge to `main` branch
-4. GitHub Action automatically imports to production
-
-## 🔍 Finding Collection IDs
-
-In Metabase, go to the collection and check the URL:
-```
-https://your-metabase.com/collection/42
-                                    ^^
-                                    Collection ID
+# Run export
+./scripts/export.sh
 ```
 
-## ⚠️ Important Notes
+### 2. Review & Commit Changes
 
-- **Never edit production directly** - always go through this workflow
-- Keep dev and prod Metabase versions in sync
-- Avoid dashboard subscriptions/alerts in collections you serialize
-- Don't use model caching in development (conflicts with production)
+```bash
+git status
+git add collections/
+git commit -m "Update: Added new sales dashboard"
+git push origin main
+```
 
-## 📚 Resources
+### 3. Auto-Deploy to Production
 
-- [Metabase Serialization Docs](https://www.metabase.com/docs/latest/installation-and-operation/serialization)
-- [Git Workflow Tutorial](https://www.metabase.com/learn/metabase-basics/administration/administration-and-operation/git-based-workflow)
+When you push to `main`, the GitHub Action automatically imports the content to production!
+
+## 📝 Notes
+
+- **Open Source Solution**: This uses the [Metabase Migration Toolkit](https://github.com/your-repo/metabase-migration-toolkit), which works with the free/open-source version of Metabase.
+- **Local Testing**: For local GitHub Actions (where production runs on localhost), you may need a tunnel or self-hosted runner.
+- **Password Security**: Update `MB_PROD_PASSWORD` in GitHub secrets with your actual production password.
+
+## 🔧 Manual Import
+
+To manually import to any Metabase instance:
+
+```bash
+export METABASE_HOST="http://localhost:3001"
+export METABASE_USER="your-email@example.com"
+export METABASE_PASSWORD="your-password"
+
+./scripts/import.sh
+```
