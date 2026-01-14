@@ -1,0 +1,350 @@
+{
+  "cache_invalidated_at": null,
+  "description": null,
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 1,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "A unique identifier given to each user.",
+      "semantic_type": "type/PK",
+      "coercion_strategy": null,
+      "name": "ID",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        4,
+        null
+      ],
+      "effective_type": "type/BigInteger",
+      "id": 4,
+      "visibility_type": "normal",
+      "display_name": "ID",
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": "The street address of the account’s billing address",
+      "semantic_type": null,
+      "coercion_strategy": null,
+      "name": "ADDRESS",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        51,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 51,
+      "visibility_type": "normal",
+      "display_name": "Address",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The contact email for the account.",
+      "semantic_type": "type/Email",
+      "coercion_strategy": null,
+      "name": "EMAIL",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        7,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 7,
+      "visibility_type": "normal",
+      "display_name": "Email",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The name of the user who owns an account",
+      "semantic_type": "type/Name",
+      "coercion_strategy": null,
+      "name": "NAME",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        48,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 48,
+      "visibility_type": "normal",
+      "display_name": "Name",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The city of the account’s billing address",
+      "semantic_type": "type/City",
+      "coercion_strategy": null,
+      "name": "CITY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        53,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 53,
+      "visibility_type": "normal",
+      "display_name": "City",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "This is the longitude of the user on sign-up. It might be updated in the future to the last seen location.",
+      "semantic_type": "type/Longitude",
+      "coercion_strategy": null,
+      "name": "LONGITUDE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        58,
+        null
+      ],
+      "effective_type": "type/Float",
+      "id": 58,
+      "visibility_type": "normal",
+      "display_name": "Longitude",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The state or province of the account’s billing address",
+      "semantic_type": "type/State",
+      "coercion_strategy": null,
+      "name": "STATE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        1,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 1,
+      "visibility_type": "normal",
+      "display_name": "State",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+      "semantic_type": "type/Source",
+      "coercion_strategy": null,
+      "name": "SOURCE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        30,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 30,
+      "visibility_type": "normal",
+      "display_name": "Source",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The date of birth of the user",
+      "semantic_type": "type/Birthdate",
+      "coercion_strategy": null,
+      "name": "BIRTH_DATE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        12,
+        null
+      ],
+      "effective_type": "type/Date",
+      "id": 12,
+      "visibility_type": "normal",
+      "display_name": "Birth Date",
+      "base_type": "type/Date"
+    },
+    {
+      "description": "The postal code of the account’s billing address",
+      "semantic_type": "type/ZipCode",
+      "coercion_strategy": null,
+      "name": "ZIP",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        61,
+        null
+      ],
+      "effective_type": "type/Text",
+      "id": 61,
+      "visibility_type": "normal",
+      "display_name": "Zip",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "This is the latitude of the user on sign-up. It might be updated in the future to the last seen location.",
+      "semantic_type": "type/Latitude",
+      "coercion_strategy": null,
+      "name": "LATITUDE",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        52,
+        null
+      ],
+      "effective_type": "type/Float",
+      "id": 52,
+      "visibility_type": "normal",
+      "display_name": "Latitude",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The date the user record was created. Also referred to as the user’s \"join date\"",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "name": "CREATED_AT",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        50,
+        null
+      ],
+      "effective_type": "type/DateTime",
+      "id": 50,
+      "visibility_type": "normal",
+      "display_name": "Created At",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Age",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "expression",
+        "Age"
+      ],
+      "name": "Age",
+      "semantic_type": null
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "People with age",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "expressions": [
+          [
+            "datetime-diff",
+            {
+              "lib/uuid": "d84a0395-2fcf-4f70-995b-99b1b3d94898",
+              "lib/expression-name": "Age"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Date",
+                "lib/uuid": "3edc37a9-9176-4cf0-8721-0bf1490a4786",
+                "effective-type": "type/Date"
+              },
+              12
+            ],
+            [
+              "now",
+              {
+                "lib/uuid": "66b9e83a-8bb2-4d2d-9192-6840a5d2c0d7"
+              }
+            ],
+            "year"
+          ]
+        ],
+        "source-table": 1
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 32,
+  "legacy_query": "{\"database\":1,\"query\":{\"expressions\":{\"Age\":[\"datetime-diff\",[\"field\",12,{\"base-type\":\"type/Date\"}],[\"now\"],\"year\"]},\"source-table\":1},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "c5m4bxKyi7GEa1sML-wpu",
+  "collection_preview": true,
+  "visualization_settings": {
+    "table.cell_column": "LONGITUDE",
+    "table.pivot_column": "SOURCE"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

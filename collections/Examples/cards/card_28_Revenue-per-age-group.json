@@ -1,0 +1,180 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Shows the revenue distributed by age group",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": 1,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "base_type": "type/Decimal",
+      "description": "Age of the customer in years.",
+      "display_name": "Age",
+      "effective_type": "type/Decimal",
+      "field_ref": [
+        "field",
+        "Age",
+        {
+          "base-type": "type/BigInteger"
+        }
+      ],
+      "name": "Age",
+      "semantic_type": "type/Quantity"
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Sum of Total",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "sum",
+      "semantic_type": "type/Currency",
+      "settings": {
+        "currency": "USD"
+      }
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Revenue per age group",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "3f5d9cc4-b697-44ed-8ec9-9774f572c57e"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "47c1c549-49fe-43e3-b025-0260161ec5fc"
+              },
+              "TOTAL"
+            ]
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/BigInteger",
+              "binning": {
+                "strategy": "num-bins",
+                "num-bins": 10
+              },
+              "lib/uuid": "8876021a-0d2e-4d7c-bf3a-6f70663580bd"
+            },
+            "Age"
+          ]
+        ],
+        "filters": [
+          [
+            "between",
+            {
+              "lib/uuid": "121b9865-61de-40ac-8b13-398da152fb40"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/BigInteger",
+                "lib/uuid": "9675b238-9ef4-4a9d-8497-c9fd8cb395fa"
+              },
+              "Age"
+            ],
+            20,
+            70
+          ]
+        ],
+        "source-card": 1
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 28,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"sum\",[\"field\",\"TOTAL\",{\"base-type\":\"type/Float\"}]]],\"breakout\":[[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\",\"binning\":{\"strategy\":\"num-bins\",\"num-bins\":10}}]],\"filter\":[\"between\",[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\"}],20,70],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "bar",
+  "archived_directly": false,
+  "entity_id": "g7G9X1p0na--gwNCUL75j",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.dimensions": [
+      "Age"
+    ],
+    "graph.show_values": true,
+    "graph.metrics": [
+      "sum"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

@@ -1,0 +1,157 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Indicates the average customer review of our products",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 3,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "base_type": "type/Float",
+      "display_name": "Average of Rating",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "avg",
+      "semantic_type": "type/Score",
+      "settings": null
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Average product rating",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "avg",
+            {
+              "lib/uuid": "71fce08f-dd87-4150-a6ad-7e5e3ec32be3"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "e9e982eb-fde7-437e-a0ce-80bc5a45657a",
+                "effective-type": "type/Float"
+              },
+              16
+            ]
+          ]
+        ],
+        "source-table": 3
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 22,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"avg\",[\"field\",16,{\"base-type\":\"type/Float\"}]]],\"source-table\":3},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "gauge",
+  "archived_directly": false,
+  "entity_id": "fKu0z-vEC1WwVv1Lu95jD",
+  "collection_preview": true,
+  "visualization_settings": {
+    "gauge.segments": [
+      {
+        "color": "#ED6E6E",
+        "label": "",
+        "max": 1,
+        "min": 0
+      },
+      {
+        "color": "#F2A86F",
+        "label": "",
+        "max": 2,
+        "min": 1
+      },
+      {
+        "color": "#F9D45C",
+        "label": "",
+        "max": 3,
+        "min": 2
+      },
+      {
+        "color": "#A7D07C",
+        "label": "",
+        "max": 4,
+        "min": 3
+      },
+      {
+        "color": "#689636",
+        "label": "",
+        "max": 5,
+        "min": 4
+      }
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

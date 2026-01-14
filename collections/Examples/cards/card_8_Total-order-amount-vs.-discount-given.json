@@ -1,0 +1,317 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Analysis of discounts given vs. the size of the order",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "coercion_strategy": null,
+      "unit": "quarter",
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        13,
+        {
+          "base-type": "type/DateTime",
+          "temporal-unit": "quarter"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At: Quarter",
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": "Number of products bought.",
+      "semantic_type": "type/Quantity",
+      "coercion_strategy": null,
+      "name": "QUANTITY",
+      "settings": {
+        "show_mini_bar": false
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        2,
+        {
+          "base-type": "type/Integer",
+          "binning": {
+            "strategy": "num-bins",
+            "min-value": 0.0,
+            "max-value": 100.0,
+            "num-bins": 8,
+            "bin-width": 12.5
+          }
+        }
+      ],
+      "effective_type": "type/Decimal",
+      "id": 2,
+      "visibility_type": "normal",
+      "display_name": "Quantity",
+      "base_type": "type/Decimal"
+    },
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "CATEGORY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "base-type": "type/Text",
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 18,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Sum of Total",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "sum",
+      "semantic_type": "type/Currency",
+      "settings": {
+        "currency": "USD"
+      }
+    },
+    {
+      "base_type": "type/Float",
+      "display_name": "Sum of Discount",
+      "effective_type": "type/Float",
+      "field_ref": [
+        "aggregation",
+        1
+      ],
+      "name": "sum_2",
+      "semantic_type": "type/Discount",
+      "settings": null
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        2
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Total order amount vs. discount given",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "quarter",
+              "lib/uuid": "a23a54f1-2027-4700-9a59-bfb489031967",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Integer",
+              "binning": {
+                "strategy": "default"
+              },
+              "lib/uuid": "325a0e10-4ffa-4400-8f55-29ed2b5373c3",
+              "effective-type": "type/Integer"
+            },
+            2
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "e4fe6b34-edd6-43af-98af-174f0dfffae8",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "aggregation": [
+          [
+            "sum",
+            {
+              "lib/uuid": "fbcf9120-48c7-4cc4-9f45-33aa41b56528"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "ee4846d9-54bb-489b-a4fb-5889ef685d03",
+                "effective-type": "type/Float"
+              },
+              5
+            ]
+          ],
+          [
+            "sum",
+            {
+              "lib/uuid": "87c24e82-7c77-454b-9232-0965ddd403de"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Float",
+                "lib/uuid": "4eabbc56-41e0-4acd-a8ad-71f9f68c230c",
+                "effective-type": "type/Float"
+              },
+              3
+            ]
+          ],
+          [
+            "count",
+            {
+              "lib/uuid": "98ba3971-2e5a-4112-866d-7fd32b335719"
+            }
+          ]
+        ],
+        "source-table": 2
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 8,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"sum\",[\"field\",5,{\"base-type\":\"type/Float\"}]],[\"sum\",[\"field\",3,{\"base-type\":\"type/Float\"}]],[\"count\"]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}],[\"field\",2,{\"base-type\":\"type/Integer\",\"binning\":{\"strategy\":\"default\"}}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "scatter",
+  "archived_directly": false,
+  "entity_id": "X8HNuB_i3j2uNFnsx3vQ0",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.show_trendline": false,
+    "graph.y_axis.title_text": "Discount",
+    "scatter.bubble": "count",
+    "graph.series_order_dimension": null,
+    "graph.x_axis.title_text": "Total",
+    "graph.metrics": [
+      "sum_2"
+    ],
+    "graph.tooltip_columns": [
+      "[\"name\",\"count\"]"
+    ],
+    "graph.series_order": null,
+    "column_settings": {
+      "[\"name\",\"sum_2\"]": {
+        "decimals": 0
+      }
+    },
+    "series_settings": {
+      "Doohickey": {
+        "color": "#7172AD"
+      },
+      "Gadget": {
+        "color": "#999AC4"
+      },
+      "Gizmo": {
+        "color": "#C7EAEA"
+      },
+      "Widget": {
+        "color": "#227FD2"
+      },
+      "sum_2": {
+        "color": "#7172AD"
+      }
+    },
+    "graph.dimensions": [
+      "sum",
+      "CATEGORY"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

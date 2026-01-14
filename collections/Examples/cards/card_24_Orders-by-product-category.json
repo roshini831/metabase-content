@@ -1,0 +1,307 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Compares the orders of each category quarter over quarter",
+  "archived": false,
+  "view_count": 13,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Category",
+      "table_id": 3,
+      "lib/deduplicated-name": "CATEGORY",
+      "lib/original-name": "CATEGORY",
+      "lib/breakout?": true,
+      "name": "CATEGORY",
+      "lib/source": "source/implicitly-joinable",
+      "lib/source-column-alias": "CATEGORY",
+      "lib/original-display-name": "Category",
+      "source": "breakout",
+      "fk_field_id": 14,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 18,
+      "lib/desired-column-alias": "PRODUCTS__via__PRODUCT_ID__CATEGORY",
+      "position": 3,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 4,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 6.375
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The date and time an order was submitted.",
+      "database_type": "TIMESTAMP",
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 2,
+      "lib/deduplicated-name": "CREATED_AT",
+      "lib/original-name": "CREATED_AT",
+      "lib/breakout?": true,
+      "unit": "quarter",
+      "name": "CREATED_AT",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "CREATED_AT",
+      "lib/original-display-name": "Created At",
+      "source": "breakout",
+      "field_ref": [
+        "field",
+        13,
+        {
+          "temporal-unit": "quarter"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "active": true,
+      "id": 13,
+      "lib/desired-column-alias": "CREATED_AT",
+      "metabase.lib.field/temporal-unit": "quarter",
+      "position": 7,
+      "visibility_type": "normal",
+      "inherited_temporal_unit": "quarter",
+      "display_name": "Created At: Quarter",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 10001,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/DateTime": {
+            "earliest": "2022-04-30T18:56:13.352Z",
+            "latest": "2026-04-19T14:07:15.657Z"
+          }
+        }
+      },
+      "base_type": "type/DateTime"
+    },
+    {
+      "database_type": "BIGINT",
+      "semantic_type": "type/Quantity",
+      "lib/deduplicated-name": "count",
+      "lib/original-name": "count",
+      "name": "count",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "count",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/BigInteger",
+      "lib/desired-column-alias": "count",
+      "display_name": "Count",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 38,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 73.0,
+            "q1": 332.5,
+            "q3": 429.5,
+            "max": 467.0,
+            "sd": 105.26609749606602,
+            "avg": 360.15
+          }
+        }
+      },
+      "base_type": "type/BigInteger"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders by product category",
+  "last_query_start": "2026-01-14T16:38:21.408764Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T16:38:21.432517Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": 167.23076923076923,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "9144cb06-7936-45fa-a674-989003bfff27"
+            },
+            19
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "ec86ad65-1cfd-459a-b779-629ca83f7543",
+              "effective-type": "type/Text"
+            },
+            18
+          ],
+          [
+            "field",
+            {
+              "temporal-unit": "quarter",
+              "base-type": "type/DateTime",
+              "original-temporal-unit": "month",
+              "lib/uuid": "46f227d5-44fb-4090-aca8-fd18a2df207e",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "include-current": true,
+              "lib/uuid": "8c650211-5afd-4273-b4ae-adb374205fc6"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "7ef7c7e3-8fee-4d52-8b2b-4afcba8676af",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            -2,
+            "year"
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 24,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",19]],\"breakout\":[[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}],[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\",\"original-temporal-unit\":\"month\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "line",
+  "archived_directly": false,
+  "entity_id": "kgAiQ87dLKJmTnOaTeVsc",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.show_goal": true,
+    "graph.show_trendline": false,
+    "graph.y_axis.title_text": "",
+    "graph.show_values": true,
+    "graph.x_axis.title_text": "",
+    "graph.goal_value": 500,
+    "graph.metrics": [
+      "count"
+    ],
+    "graph.label_value_formatting": "compact",
+    "series_settings": {
+      "Doohickey": {
+        "color": "#7172AD",
+        "display": "area",
+        "line.interpolate": "cardinal",
+        "line.size": "M",
+        "line.style": "solid"
+      },
+      "Gadget": {
+        "color": "#A989C5",
+        "line.size": "M"
+      },
+      "Gizmo": {
+        "color": "#C7EAEA",
+        "line.size": "M",
+        "line.style": "solid"
+      },
+      "Widget": {
+        "color": "#227FD2",
+        "line.size": "M"
+      }
+    },
+    "graph.dimensions": [
+      "CREATED_AT",
+      "CATEGORY"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

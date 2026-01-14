@@ -1,0 +1,206 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Total revenue last quarter compared to the previous",
+  "archived": false,
+  "view_count": 13,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "database_type": "TIMESTAMP",
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 2,
+      "lib/deduplicated-name": "CREATED_AT",
+      "lib/original-name": "CREATED_AT",
+      "lib/breakout?": true,
+      "unit": "quarter",
+      "name": "CREATED_AT",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "CREATED_AT",
+      "lib/original-display-name": "Created At",
+      "source": "breakout",
+      "field_ref": [
+        "field",
+        13,
+        {
+          "temporal-unit": "quarter"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "active": true,
+      "id": 13,
+      "lib/desired-column-alias": "CREATED_AT",
+      "metabase.lib.field/temporal-unit": "quarter",
+      "position": 7,
+      "visibility_type": "normal",
+      "inherited_temporal_unit": "quarter",
+      "display_name": "Created At: Quarter",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 10001,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/DateTime": {
+            "earliest": "2022-04-30T18:56:13.352Z",
+            "latest": "2026-04-19T14:07:15.657Z"
+          }
+        }
+      },
+      "base_type": "type/DateTime"
+    },
+    {
+      "database_type": "DECFLOAT",
+      "semantic_type": null,
+      "lib/deduplicated-name": "sum",
+      "lib/original-name": "sum",
+      "name": "sum",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "sum",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/Float",
+      "lib/desired-column-alias": "sum",
+      "display_name": "Sum of Total",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 14,
+          "nil%": 0.2352941176470588
+        },
+        "type": {
+          "type/Number": {
+            "min": 36453.92923470405,
+            "q1": 65069.208990113075,
+            "q3": 142628.11468257313,
+            "max": 150057.1074961184,
+            "sd": 42907.89243122207,
+            "avg": 110592.71874078922
+          }
+        }
+      },
+      "base_type": "type/Float"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Revenue per quarter",
+  "last_query_start": "2026-01-14T16:38:21.402276Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T16:38:21.432517Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": 165.0,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "quarter",
+              "lib/uuid": "cd54a47b-2719-45ad-b4a3-dc8354594875",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "b9fbd146-66c2-4f85-aed7-d9b6804fd5c6"
+            },
+            9
+          ]
+        ],
+        "source-table": 2
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 15,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"breakout\":[[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "smartscalar",
+  "archived_directly": false,
+  "entity_id": "D4o8cCTOY-SnxoYDRVWcO",
+  "collection_preview": true,
+  "visualization_settings": {
+    "scalar.comparisons": [
+      {
+        "id": "a8d008d4-d8f1-cbc1-b0ad-f4ab30791b9e",
+        "type": "previousPeriod"
+      },
+      {
+        "id": "e7fa0d15-867c-2628-dbea-9f9a41e3ca38",
+        "type": "periodsAgo",
+        "value": 4
+      }
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

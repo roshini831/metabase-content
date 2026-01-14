@@ -1,0 +1,223 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Customers that signed up for our monthly subscription",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 7,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "BUTTON_LABEL",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        29,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 29,
+      "visibility_type": "normal",
+      "display_name": "Button Label",
+      "base_type": "type/Text"
+    },
+    {
+      "description": null,
+      "semantic_type": "type/CreationDate",
+      "coercion_strategy": null,
+      "unit": "month",
+      "name": "TIMESTAMP",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        35,
+        {
+          "base-type": "type/DateTime"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 35,
+      "visibility_type": "normal",
+      "display_name": "Timestamp: Month",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "count",
+        {
+          "base-type": "type/Integer"
+        }
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Number of subscriptions",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "5afcf5ad-d150-42ac-91df-2c7f82bca326",
+              "effective-type": "type/Text"
+            },
+            29
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "month",
+              "lib/uuid": "8162afee-7d0d-4fa0-837a-08c331514ea4",
+              "effective-type": "type/DateTime"
+            },
+            35
+          ]
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "29d3ed7a-1f03-4a75-b220-553a5c379cc0"
+            }
+          ]
+        ],
+        "source-table": 7
+      },
+      {
+        "lib/type": "mbql.stage/mbql",
+        "filters": [
+          [
+            "=",
+            {
+              "lib/uuid": "d66562aa-0a11-42cd-9caa-63ce6184dbab"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Text",
+                "lib/uuid": "43710ee7-991d-49c4-a11a-75b418a45ea8"
+              },
+              "BUTTON_LABEL"
+            ],
+            "Subscribe"
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 16,
+  "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"=\",[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}],\"Subscribe\"],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",29,{\"base-type\":\"type/Text\"}],[\"field\",35,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"month\"}]],\"source-table\":7}},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "area",
+  "archived_directly": false,
+  "entity_id": "qQ3JGGOxVC8mrOLwxpcR6",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.show_trendline": true,
+    "graph.y_axis.title_text": "",
+    "graph.show_values": true,
+    "graph.series_order_dimension": null,
+    "graph.x_axis.title_text": "",
+    "graph.metrics": [
+      "count"
+    ],
+    "scalar.field": "count",
+    "graph.series_order": null,
+    "series_settings": {
+      "Subscribe": {
+        "color": "#7172AD",
+        "line.interpolate": "linear",
+        "title": "Subscriptions"
+      },
+      "count": {
+        "color": "#7172AD"
+      }
+    },
+    "graph.dimensions": [
+      "TIMESTAMP"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

@@ -1,0 +1,805 @@
+{
+  "meta": {
+    "source_url": "http://localhost:3000",
+    "export_timestamp": "2026-01-14T18:56:49.790946+00:00",
+    "tool_version": "1.0.0",
+    "cli_args": {
+      "source_url": "http://localhost:3000",
+      "export_dir": "./collections",
+      "metabase_version": "v57",
+      "source_username": "lakshmiv6768@gmail.com",
+      "source_password": "********",
+      "source_session_token": null,
+      "source_personal_token": null,
+      "include_dashboards": true,
+      "include_archived": false,
+      "include_permissions": false,
+      "root_collection_ids": null,
+      "log_level": "INFO"
+    },
+    "metabase_version": "v57"
+  },
+  "databases": {
+    "1": "Sample Database"
+  },
+  "collections": [
+    {
+      "id": 2,
+      "name": "Examples",
+      "slug": "examples",
+      "description": "Some examples to get started with",
+      "parent_id": null,
+      "personal_owner_id": null,
+      "path": "Examples"
+    },
+    {
+      "id": 1,
+      "name": "Trash",
+      "slug": "trash",
+      "description": null,
+      "parent_id": null,
+      "personal_owner_id": null,
+      "path": "Trash"
+    }
+  ],
+  "cards": [
+    {
+      "id": 37,
+      "name": "Aerodynamic Copper Knife trend",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_37_Aerodynamic-Copper-Knife-trend.json",
+      "checksum": "652a58ef7b8d9a216b1be737890dfa419bcb002379344087d2e9a5334181388e",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 25,
+      "name": "All subscriptions in table view",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_25_All-subscriptions-in-table-view.json",
+      "checksum": "eabeb1575feb91a22625138854f8948ae03b57ee8fbcb2da32b4cf80cab435ba",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 22,
+      "name": "Average product rating",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_22_Average-product-rating.json",
+      "checksum": "15499d9237c3e60de808d9db0454c7ace458d27ffeb4949927e4883a1c594dd1",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 21,
+      "name": "Best selling products",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_21_Best-selling-products.json",
+      "checksum": "3f24d75b3e49ece9c2bffb51f85fcec6d4130bd46ad1195abf307bd4f4303d3a",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 6,
+      "name": "Checkout funnel",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_6_Checkout-funnel.json",
+      "checksum": "79f4dca31569b5c35f022c16bc345c7d2f41060f71da86acb5a8b37dde383af8",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 31,
+      "name": "Checkout funnel - Modified",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_31_Checkout-funnel---Modified.json",
+      "checksum": "8a80fa2ef658c9ed094e7ae5fb3a4d3a88a17ec6e5224b33b5f533c54e49853e",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 3,
+      "name": "Customer satisfaction per category",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_3_Customer-satisfaction-per-category.json",
+      "checksum": "ff03b4453b01324d2ed0020a9e3d4cbd80370666e2eec8a75b1989c75499e590",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 5,
+      "name": "Customer survey responses",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_5_Customer-survey-responses.json",
+      "checksum": "d1d5193c268585e070e16e63cb3a37654f2e785afab6730a1ed2b66c2515ce0e",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 34,
+      "name": "Discounts given per quarter",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_34_Discounts-given-per-quarter.json",
+      "checksum": "adbf53205e2b164d94437b4abf545b3ec64e40e85e2d6688fd155780d0f6ebdd",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 24,
+      "name": "Orders by product category",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_24_Orders-by-product-category.json",
+      "checksum": "6d28082f4ddd1915887d4490327300c17ffc0fde49ea98149388c53e6c2c118c",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 2,
+      "name": "Revenue by state",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_2_Revenue-by-state.json",
+      "checksum": "2787e3b0666f50d818d8bc7189e69e353a8fa4c1c7a10da01eee7e819ac7a187",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 18,
+      "name": "Product category orders per age",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_18_Product-category-orders-per-age.json",
+      "checksum": "94bbfa480cec15fb22e33445376e06d2c1c38e25a61536a15a189b919a93c4e9",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 12,
+      "name": "Revenue and orders over time",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_12_Revenue-and-orders-over-time.json",
+      "checksum": "ade29dcfd3e43cfb2511beae594101de308ed3bce08f26f6bdaa5c6b87732361",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 15,
+      "name": "Revenue per quarter",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_15_Revenue-per-quarter.json",
+      "checksum": "886ecdcbbd6b78880444e1f59087d1955c30ad20eb776243bb51a8604878cc60",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 17,
+      "name": "Revenue goal for this quarter",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_17_Revenue-goal-for-this-quarter.json",
+      "checksum": "7f94d048b303e44720ee6bf2f1431d78323141d92d736d89240dfaeb68011abf",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 13,
+      "name": "Revenue by product category",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_13_Revenue-by-product-category.json",
+      "checksum": "7929bb564a8c0bec453652f4ce3e36d2b7abef8b4ac3604aa7a5777660e8405e",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 10,
+      "name": "Orders according to sources per quarter",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_10_Orders-according-to-sources-per-quarter.json",
+      "checksum": "9f0a66814f11a0b545f6c5ddbb15a210ca779d6df1ad9f64de3b6b98c0062839",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 20,
+      "name": "Total orders by product category",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_20_Total-orders-by-product-category.json",
+      "checksum": "75c2a022469f04ff615d328b2c12cc083fc47512144dd66f2300bb6807f5f306",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 7,
+      "name": "Product breakdown",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_7_Product-breakdown.json",
+      "checksum": "77d15f168267764028121a9a51e1d1361803bb9a23767c730374a38696c3a4c0",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 8,
+      "name": "Total order amount vs. discount given",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_8_Total-order-amount-vs.-discount-given.json",
+      "checksum": "2b0a762e83663ea0650993cf192748b54dc9211d752ecd79110655df398f038a",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 16,
+      "name": "Number of subscriptions",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_16_Number-of-subscriptions.json",
+      "checksum": "dfd4e482b3ded51308bcbd214d18187113f62d1c2baca5a8eef83d7e01fbe66b",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 23,
+      "name": "Most recent subscription",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_23_Most-recent-subscription.json",
+      "checksum": "fe8eff333bcc921a7835fd5a82c43031507509e0a4885504f9a444e2800fe244",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 11,
+      "name": "User flow diagram",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_11_User-flow-diagram.json",
+      "checksum": "93f0a9e892c8f437b15798a31de1168fd32dd5f059c3e2337e0e9bf63c1ed6cd",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 14,
+      "name": "Subscription seats over time",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_14_Subscription-seats-over-time.json",
+      "checksum": "95fa4017a2b308dd1de912026a69b7cbfa6a471514257602ae8531ace5845e6c",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 29,
+      "name": "Enormous Wool Car trend",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_29_Enormous-Wool-Car-trend.json",
+      "checksum": "d1646bd12aa753b7b42a6fee45070e362f4d357ba25d4192c8b34793112564f3",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 26,
+      "name": "Heavy-Duty Silk Chair trend",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_26_Heavy-Duty-Silk-Chair-trend.json",
+      "checksum": "b92981c0de8dd87e30810c15f9b7301386b03bb2791be363cab861d09cd01357",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 1,
+      "name": "Orders + People",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_1_Orders-+-People.json",
+      "checksum": "c9abd29563f00ee429761e9592e3077782beae10f49fd3e1ac85b120ff596ee3",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": true
+    },
+    {
+      "id": 36,
+      "name": "Orders by source per age group",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_36_Orders-by-source-per-age-group.json",
+      "checksum": "42a85bf2b37c1750c0eb034ea92ed1341d67d620ceb9b4e431ac9735ff479c59",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 35,
+      "name": "Orders by source per individual age",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_35_Orders-by-source-per-individual-age.json",
+      "checksum": "606291ed21ae0f494c46041735e11604d22b1c6fe4db7263220c3fa4ae2589db",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 32,
+      "name": "People with age",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_32_People-with-age.json",
+      "checksum": "354451c9a91482560ad1cecaa6a248e442ddbbefed6eb52d81668aed87032dd0",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 4,
+      "name": "Product category orders per age group",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_4_Product-category-orders-per-age-group.json",
+      "checksum": "bafda69f7104ccc22ce2f73d7fce14fe2c4a32cf35662e4cf53198f844b0bcd8",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 27,
+      "name": "Quantity sold per quarter",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_27_Quantity-sold-per-quarter.json",
+      "checksum": "b0a6c256d729386aa4fff8eb33a9fd24e44f7c6977ee4589c461b7e10d844e95",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 28,
+      "name": "Revenue per age group",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_28_Revenue-per-age-group.json",
+      "checksum": "5d332d64c4bc31f997ede3127b3323054c5cbe083441569b431cffbaccea3d51",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 33,
+      "name": "Revenue per individual age",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_33_Revenue-per-individual-age.json",
+      "checksum": "083e536d0b42503ada912370b37564b341fb989c960a7777615b5a471f5529c6",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    },
+    {
+      "id": 30,
+      "name": "Unique customers per month",
+      "collection_id": 2,
+      "database_id": 1,
+      "file_path": "Examples/cards/card_30_Unique-customers-per-month.json",
+      "checksum": "7f14319f9ce19c606ce636132151ccadb94d1e48a86ba9d3bd12f12bb6e423d3",
+      "archived": false,
+      "dataset_query": null,
+      "dataset": false
+    }
+  ],
+  "dashboards": [
+    {
+      "id": 1,
+      "name": "E-commerce Insights",
+      "collection_id": 2,
+      "ordered_cards": [
+        21,
+        24,
+        22,
+        2,
+        18,
+        12,
+        15,
+        17,
+        13,
+        10,
+        20,
+        7,
+        8,
+        3,
+        5,
+        6,
+        16,
+        23,
+        11,
+        14
+      ],
+      "file_path": "Examples/dashboards/dash_1_E-commerce-Insights.json",
+      "checksum": "81273ea7d3408f33046f4a42c5e6536d19c55edbe5271fd2e89bf22c4a632ad7",
+      "archived": false
+    }
+  ],
+  "permission_groups": [],
+  "permissions_graph": {},
+  "collection_permissions_graph": {},
+  "database_metadata": {
+    "1": {
+      "tables": [
+        {
+          "id": 6,
+          "name": "ACCOUNTS",
+          "fields": [
+            {
+              "id": 24,
+              "name": "ID"
+            },
+            {
+              "id": 62,
+              "name": "EMAIL"
+            },
+            {
+              "id": 37,
+              "name": "FIRST_NAME"
+            },
+            {
+              "id": 36,
+              "name": "LAST_NAME"
+            },
+            {
+              "id": 43,
+              "name": "PLAN"
+            },
+            {
+              "id": 41,
+              "name": "SOURCE"
+            },
+            {
+              "id": 33,
+              "name": "SEATS"
+            },
+            {
+              "id": 31,
+              "name": "CREATED_AT"
+            },
+            {
+              "id": 40,
+              "name": "TRIAL_ENDS_AT"
+            },
+            {
+              "id": 39,
+              "name": "CANCELED_AT"
+            },
+            {
+              "id": 38,
+              "name": "TRIAL_CONVERTED"
+            },
+            {
+              "id": 42,
+              "name": "ACTIVE_SUBSCRIPTION"
+            },
+            {
+              "id": 47,
+              "name": "LEGACY_PLAN"
+            },
+            {
+              "id": 57,
+              "name": "LATITUDE"
+            },
+            {
+              "id": 21,
+              "name": "LONGITUDE"
+            },
+            {
+              "id": 56,
+              "name": "COUNTRY"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "ANALYTIC_EVENTS",
+          "fields": [
+            {
+              "id": 60,
+              "name": "ID"
+            },
+            {
+              "id": 45,
+              "name": "ACCOUNT_ID"
+            },
+            {
+              "id": 32,
+              "name": "EVENT"
+            },
+            {
+              "id": 35,
+              "name": "TIMESTAMP"
+            },
+            {
+              "id": 49,
+              "name": "PAGE_URL"
+            },
+            {
+              "id": 29,
+              "name": "BUTTON_LABEL"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "FEEDBACK",
+          "fields": [
+            {
+              "id": 20,
+              "name": "ID"
+            },
+            {
+              "id": 25,
+              "name": "ACCOUNT_ID"
+            },
+            {
+              "id": 26,
+              "name": "EMAIL"
+            },
+            {
+              "id": 27,
+              "name": "DATE_RECEIVED"
+            },
+            {
+              "id": 22,
+              "name": "RATING"
+            },
+            {
+              "id": 23,
+              "name": "RATING_MAPPED"
+            },
+            {
+              "id": 28,
+              "name": "BODY"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "INVOICES",
+          "fields": [
+            {
+              "id": 68,
+              "name": "ID"
+            },
+            {
+              "id": 66,
+              "name": "ACCOUNT_ID"
+            },
+            {
+              "id": 64,
+              "name": "PAYMENT"
+            },
+            {
+              "id": 70,
+              "name": "EXPECTED_INVOICE"
+            },
+            {
+              "id": 46,
+              "name": "PLAN"
+            },
+            {
+              "id": 71,
+              "name": "DATE_RECEIVED"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "ORDERS",
+          "fields": [
+            {
+              "id": 9,
+              "name": "ID"
+            },
+            {
+              "id": 11,
+              "name": "USER_ID"
+            },
+            {
+              "id": 14,
+              "name": "PRODUCT_ID"
+            },
+            {
+              "id": 10,
+              "name": "SUBTOTAL"
+            },
+            {
+              "id": 6,
+              "name": "TAX"
+            },
+            {
+              "id": 5,
+              "name": "TOTAL"
+            },
+            {
+              "id": 3,
+              "name": "DISCOUNT"
+            },
+            {
+              "id": 13,
+              "name": "CREATED_AT"
+            },
+            {
+              "id": 2,
+              "name": "QUANTITY"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "name": "PEOPLE",
+          "fields": [
+            {
+              "id": 4,
+              "name": "ID"
+            },
+            {
+              "id": 51,
+              "name": "ADDRESS"
+            },
+            {
+              "id": 7,
+              "name": "EMAIL"
+            },
+            {
+              "id": 54,
+              "name": "PASSWORD"
+            },
+            {
+              "id": 48,
+              "name": "NAME"
+            },
+            {
+              "id": 53,
+              "name": "CITY"
+            },
+            {
+              "id": 58,
+              "name": "LONGITUDE"
+            },
+            {
+              "id": 1,
+              "name": "STATE"
+            },
+            {
+              "id": 30,
+              "name": "SOURCE"
+            },
+            {
+              "id": 12,
+              "name": "BIRTH_DATE"
+            },
+            {
+              "id": 61,
+              "name": "ZIP"
+            },
+            {
+              "id": 52,
+              "name": "LATITUDE"
+            },
+            {
+              "id": 50,
+              "name": "CREATED_AT"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "PRODUCTS",
+          "fields": [
+            {
+              "id": 8,
+              "name": "ID"
+            },
+            {
+              "id": 15,
+              "name": "EAN"
+            },
+            {
+              "id": 17,
+              "name": "TITLE"
+            },
+            {
+              "id": 18,
+              "name": "CATEGORY"
+            },
+            {
+              "id": 34,
+              "name": "VENDOR"
+            },
+            {
+              "id": 44,
+              "name": "PRICE"
+            },
+            {
+              "id": 16,
+              "name": "RATING"
+            },
+            {
+              "id": 63,
+              "name": "CREATED_AT"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "REVIEWS",
+          "fields": [
+            {
+              "id": 59,
+              "name": "ID"
+            },
+            {
+              "id": 65,
+              "name": "PRODUCT_ID"
+            },
+            {
+              "id": 67,
+              "name": "REVIEWER"
+            },
+            {
+              "id": 19,
+              "name": "RATING"
+            },
+            {
+              "id": 69,
+              "name": "BODY"
+            },
+            {
+              "id": 55,
+              "name": "CREATED_AT"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,871 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Sample orders joined with products",
+  "archived": false,
+  "view_count": 13,
+  "collection_position": 1,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "This is a unique ID for the product. It is also called the “Invoice number” or “Confirmation number” in customer facing emails and screens.",
+      "database_type": "BIGINT",
+      "semantic_type": "type/PK",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "ID",
+      "lib/original-name": "ID",
+      "lib/breakout?": false,
+      "name": "ID",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "ID",
+      "lib/original-display-name": "ID",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        9,
+        null
+      ],
+      "effective_type": "type/BigInteger",
+      "active": true,
+      "id": 9,
+      "lib/desired-column-alias": "ID",
+      "position": 0,
+      "visibility_type": "normal",
+      "display_name": "ID",
+      "fingerprint": null,
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": "The id of the user who made this order. Note that in some cases where an order was created on behalf of a customer who phoned the order in, this might be the employee who handled the request.",
+      "database_type": "INTEGER",
+      "semantic_type": "type/FK",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "USER_ID",
+      "lib/original-name": "USER_ID",
+      "lib/breakout?": false,
+      "name": "USER_ID",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "USER_ID",
+      "lib/original-display-name": "User ID",
+      "lib/external-remap": {
+        "lib/type": "metadata.column.remapping/external",
+        "id": 1,
+        "name": "User ID",
+        "field-id": 48
+      },
+      "source": "fields",
+      "fk_target_field_id": 4,
+      "field_ref": [
+        "field",
+        11,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "remapped_to": "NAME",
+      "active": true,
+      "id": 11,
+      "lib/desired-column-alias": "USER_ID",
+      "position": 1,
+      "visibility_type": "normal",
+      "options": {
+        "metabase.query-processor.middleware.add-remaps/original-field-dimension-id": 1
+      },
+      "display_name": "User ID",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 929,
+          "nil%": 0.0
+        }
+      },
+      "base_type": "type/Integer"
+    },
+    {
+      "description": "The product ID. This is an internal identifier for the product, NOT the SKU.",
+      "database_type": "INTEGER",
+      "semantic_type": "type/FK",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "PRODUCT_ID",
+      "lib/original-name": "PRODUCT_ID",
+      "lib/breakout?": false,
+      "name": "PRODUCT_ID",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "PRODUCT_ID",
+      "lib/original-display-name": "Product ID",
+      "lib/external-remap": {
+        "lib/type": "metadata.column.remapping/external",
+        "id": 2,
+        "name": "Product ID",
+        "field-id": 17
+      },
+      "source": "fields",
+      "fk_target_field_id": 8,
+      "field_ref": [
+        "field",
+        14,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "remapped_to": "TITLE",
+      "active": true,
+      "id": 14,
+      "lib/desired-column-alias": "PRODUCT_ID",
+      "position": 2,
+      "visibility_type": "normal",
+      "options": {
+        "metabase.query-processor.middleware.add-remaps/original-field-dimension-id": 2
+      },
+      "display_name": "Product ID",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 200,
+          "nil%": 0.0
+        }
+      },
+      "base_type": "type/Integer"
+    },
+    {
+      "description": "The raw, pre-tax cost of the order. Note that this might be different in the future from the product price due to promotions, credits, etc.",
+      "database_type": "DOUBLE PRECISION",
+      "semantic_type": "type/Currency",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "SUBTOTAL",
+      "lib/original-name": "SUBTOTAL",
+      "lib/breakout?": false,
+      "name": "SUBTOTAL",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "SUBTOTAL",
+      "lib/original-display-name": "Subtotal",
+      "settings": {
+        "view_as": null
+      },
+      "source": "fields",
+      "field_ref": [
+        "field",
+        10,
+        null
+      ],
+      "effective_type": "type/Float",
+      "active": true,
+      "id": 10,
+      "lib/desired-column-alias": "SUBTOTAL",
+      "position": 3,
+      "visibility_type": "normal",
+      "display_name": "Subtotal",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 340,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 15.691943673970439,
+            "q1": 49.74894519060184,
+            "q3": 105.42965746993103,
+            "max": 148.22900526552291,
+            "sd": 32.53705013056317,
+            "avg": 77.01295465356547
+          }
+        }
+      },
+      "base_type": "type/Float"
+    },
+    {
+      "description": "This is the amount of local and federal taxes that are collected on the purchase. Note that other governmental fees on some products are not included here, but instead are accounted for in the subtotal.",
+      "database_type": "DOUBLE PRECISION",
+      "semantic_type": "type/Currency",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "TAX",
+      "lib/original-name": "TAX",
+      "lib/breakout?": false,
+      "name": "TAX",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "TAX",
+      "lib/original-display-name": "Tax",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        6,
+        null
+      ],
+      "effective_type": "type/Float",
+      "active": true,
+      "id": 6,
+      "lib/desired-column-alias": "TAX",
+      "position": 4,
+      "visibility_type": "normal",
+      "display_name": "Tax",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 797,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 0.0,
+            "q1": 2.273340386603857,
+            "q3": 5.337275338216307,
+            "max": 11.12,
+            "sd": 2.3206651358900316,
+            "avg": 3.8722100000000004
+          }
+        }
+      },
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The total billed amount.",
+      "database_type": "DOUBLE PRECISION",
+      "semantic_type": "type/Currency",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "TOTAL",
+      "lib/original-name": "TOTAL",
+      "lib/breakout?": false,
+      "name": "TOTAL",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "TOTAL",
+      "lib/original-display-name": "Total",
+      "settings": {
+        "currency": "USD"
+      },
+      "source": "fields",
+      "field_ref": [
+        "field",
+        5,
+        null
+      ],
+      "effective_type": "type/Float",
+      "active": true,
+      "id": 5,
+      "lib/desired-column-alias": "TOTAL",
+      "position": 5,
+      "visibility_type": "normal",
+      "display_name": "Total",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 4426,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 8.93914247937167,
+            "q1": 51.34535490743823,
+            "q3": 110.29428389265787,
+            "max": 159.34900526552292,
+            "sd": 34.26469575709948,
+            "avg": 80.35871658771228
+          }
+        }
+      },
+      "base_type": "type/Float"
+    },
+    {
+      "description": "Discount amount.",
+      "database_type": "DOUBLE PRECISION",
+      "semantic_type": "type/Discount",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "DISCOUNT",
+      "lib/original-name": "DISCOUNT",
+      "lib/breakout?": false,
+      "name": "DISCOUNT",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "DISCOUNT",
+      "lib/original-display-name": "Discount",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        3,
+        null
+      ],
+      "effective_type": "type/Float",
+      "active": true,
+      "id": 3,
+      "lib/desired-column-alias": "DISCOUNT",
+      "position": 6,
+      "visibility_type": "normal",
+      "display_name": "Discount",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 701,
+          "nil%": 0.898
+        },
+        "type": {
+          "type/Number": {
+            "min": 0.17088996672584322,
+            "q1": 2.9786226681458743,
+            "q3": 7.338187788658235,
+            "max": 61.69684269960571,
+            "sd": 3.053663125001991,
+            "avg": 5.161255547580326
+          }
+        }
+      },
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The date and time an order was submitted.",
+      "database_type": "TIMESTAMP",
+      "semantic_type": "type/CreationTimestamp",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "CREATED_AT",
+      "lib/original-name": "CREATED_AT",
+      "lib/breakout?": false,
+      "name": "CREATED_AT",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "CREATED_AT",
+      "lib/original-display-name": "Created At",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "source": "fields",
+      "field_ref": [
+        "field",
+        13,
+        null
+      ],
+      "effective_type": "type/DateTime",
+      "active": true,
+      "id": 13,
+      "lib/desired-column-alias": "CREATED_AT",
+      "position": 7,
+      "visibility_type": "normal",
+      "display_name": "Created At",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 10001,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/DateTime": {
+            "earliest": "2022-04-30T18:56:13.352Z",
+            "latest": "2026-04-19T14:07:15.657Z"
+          }
+        }
+      },
+      "base_type": "type/DateTime"
+    },
+    {
+      "description": "Number of products bought.",
+      "database_type": "INTEGER",
+      "semantic_type": "type/Quantity",
+      "table_id": 2,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "QUANTITY",
+      "lib/original-name": "QUANTITY",
+      "lib/breakout?": false,
+      "name": "QUANTITY",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "QUANTITY",
+      "lib/original-display-name": "Quantity",
+      "settings": {
+        "show_mini_bar": false
+      },
+      "source": "fields",
+      "field_ref": [
+        "field",
+        2,
+        null
+      ],
+      "effective_type": "type/Integer",
+      "active": true,
+      "id": 2,
+      "lib/desired-column-alias": "QUANTITY",
+      "position": 8,
+      "visibility_type": "normal",
+      "display_name": "Quantity",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 62,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 0.0,
+            "q1": 1.755882607764982,
+            "q3": 4.882654507928044,
+            "max": 100.0,
+            "sd": 4.214258386403798,
+            "avg": 3.7015
+          }
+        }
+      },
+      "base_type": "type/Integer"
+    },
+    {
+      "description": "Age of the customer in years.",
+      "database_type": "BIGINT",
+      "semantic_type": "type/Quantity",
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "Age",
+      "lib/original-name": "Age",
+      "lib/breakout?": false,
+      "name": "Age",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "Age",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        "Age",
+        {
+          "base-type": "type/BigInteger"
+        }
+      ],
+      "effective_type": "type/BigInteger",
+      "lib/desired-column-alias": "Age",
+      "lib/original-expression-name": "Age",
+      "display_name": "Age",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 42,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 25.0,
+            "q1": 35.00603330622245,
+            "q3": 57.200502396825456,
+            "max": 67.0,
+            "sd": 12.053693075500936,
+            "avg": 46.373
+          }
+        }
+      },
+      "base_type": "type/BigInteger"
+    },
+    {
+      "description": "The contact email for the account.",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Email",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "EMAIL",
+      "lib/original-name": "EMAIL",
+      "lib/breakout?": false,
+      "name": "EMAIL",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "People - User__EMAIL",
+      "lib/original-display-name": "Email",
+      "settings": {
+        "link_text": ""
+      },
+      "source": "fields",
+      "lib/original-join-alias": "People - User",
+      "field_ref": [
+        "field",
+        7,
+        {
+          "join-alias": "People - User"
+        }
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 7,
+      "lib/desired-column-alias": "People - User__EMAIL",
+      "position": 2,
+      "visibility_type": "normal",
+      "options": {
+        "qp/ignore-coercion": true
+      },
+      "display_name": "Customer Email",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2500,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 1.0,
+            "percent-state": 0.0,
+            "average-length": 24.1824
+          }
+        }
+      },
+      "base_type": "type/Text",
+      "source_alias": "People - User"
+    },
+    {
+      "description": "The state or province of the account’s billing address.",
+      "database_type": "CHARACTER",
+      "semantic_type": "type/State",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "STATE",
+      "lib/original-name": "STATE",
+      "lib/breakout?": false,
+      "name": "STATE",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "People - User__STATE",
+      "lib/original-display-name": "State",
+      "source": "fields",
+      "lib/original-join-alias": "People - User",
+      "field_ref": [
+        "field",
+        1,
+        {
+          "join-alias": "People - User"
+        }
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 1,
+      "lib/desired-column-alias": "People - User__STATE",
+      "position": 7,
+      "visibility_type": "normal",
+      "options": {
+        "qp/ignore-coercion": true
+      },
+      "display_name": "State",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 49,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 1.0,
+            "average-length": 2.0
+          }
+        }
+      },
+      "base_type": "type/Text",
+      "source_alias": "People - User"
+    },
+    {
+      "description": "The name of the user who owns an account",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Name",
+      "table_id": 1,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "NAME",
+      "lib/original-name": "NAME",
+      "lib/breakout?": false,
+      "name": "NAME",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "PEOPLE__via__USER_ID__NAME",
+      "lib/original-display-name": "Name",
+      "lib/original-fk-field-id": 11,
+      "source": "fields",
+      "remapped_from": "USER_ID",
+      "field_ref": [
+        "field",
+        48,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 48,
+      "lib/desired-column-alias": "PEOPLE__via__USER_ID__NAME",
+      "position": 4,
+      "visibility_type": "normal",
+      "options": {
+        "metabase.query-processor.middleware.add-remaps/new-field-dimension-id": 1
+      },
+      "display_name": "User ID",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 2499,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 13.532
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The name of the product as it should be displayed to customers.",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Title",
+      "table_id": 3,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "TITLE",
+      "lib/original-name": "TITLE",
+      "lib/breakout?": false,
+      "name": "TITLE",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "PRODUCTS__via__PRODUCT_ID__TITLE",
+      "lib/original-display-name": "Title",
+      "lib/original-fk-field-id": 14,
+      "source": "fields",
+      "remapped_from": "PRODUCT_ID",
+      "field_ref": [
+        "field",
+        17,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 17,
+      "lib/desired-column-alias": "PRODUCTS__via__PRODUCT_ID__TITLE",
+      "position": 2,
+      "visibility_type": "normal",
+      "options": {
+        "metabase.query-processor.middleware.add-remaps/new-field-dimension-id": 2
+      },
+      "display_name": "Product ID",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 199,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 21.495
+          }
+        }
+      },
+      "base_type": "type/Text"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders + People",
+  "last_query_start": "2026-01-14T17:15:42.460902Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T17:15:42.629135Z",
+  "dashboard": null,
+  "type": "model",
+  "persisted": false,
+  "average_query_time": 230.21428571428572,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "joins": [
+          {
+            "alias": "People - User",
+            "fields": [
+              [
+                "field",
+                {
+                  "base-type": "type/Text",
+                  "join-alias": "People - User",
+                  "lib/uuid": "6d6573c9-0456-44bf-b23a-3bf2cae318b4",
+                  "effective-type": "type/Text"
+                },
+                7
+              ],
+              [
+                "field",
+                {
+                  "base-type": "type/Text",
+                  "join-alias": "People - User",
+                  "lib/uuid": "be3b91e3-06e0-4916-b27a-5798bbb29ce7",
+                  "effective-type": "type/Text"
+                },
+                1
+              ]
+            ],
+            "strategy": "left-join",
+            "conditions": [
+              [
+                "=",
+                {
+                  "lib/uuid": "76b7f70c-8496-4476-90a6-126a71dcea8e"
+                },
+                [
+                  "field",
+                  {
+                    "base-type": "type/Integer",
+                    "lib/uuid": "082f0971-497a-46ce-bd4d-d27c219e4f25",
+                    "effective-type": "type/Integer"
+                  },
+                  11
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "join-alias": "People - User",
+                    "lib/uuid": "4b6acdcf-fe10-4a70-aace-166426d67050",
+                    "effective-type": "type/BigInteger"
+                  },
+                  4
+                ]
+              ]
+            ],
+            "lib/type": "mbql/join",
+            "stages": [
+              {
+                "lib/type": "mbql.stage/mbql",
+                "source-table": 1
+              }
+            ],
+            "lib/options": {
+              "lib/uuid": "536a786b-ad82-446f-9271-24f062717ddf"
+            }
+          }
+        ],
+        "expressions": [
+          [
+            "datetime-diff",
+            {
+              "lib/uuid": "665fea91-490f-4fcd-954f-a232d8060e1d",
+              "lib/expression-name": "Age"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Date",
+                "join-alias": "People - User",
+                "lib/uuid": "ca333b2d-1990-48b7-8aea-a2227dee7bbb",
+                "effective-type": "type/Date"
+              },
+              12
+            ],
+            [
+              "now",
+              {
+                "lib/uuid": "450bb795-a2d5-4737-bc75-6bae81d7a6a2"
+              }
+            ],
+            "year"
+          ]
+        ],
+        "source-table": 2
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 1,
+  "legacy_query": "{\"database\":1,\"query\":{\"expressions\":{\"Age\":[\"datetime-diff\",[\"field\",12,{\"base-type\":\"type/Date\",\"join-alias\":\"People - User\"}],[\"now\"],\"year\"]},\"joins\":[{\"alias\":\"People - User\",\"condition\":[\"=\",[\"field\",11,{\"base-type\":\"type/Integer\"}],[\"field\",4,{\"base-type\":\"type/BigInteger\",\"join-alias\":\"People - User\"}]],\"fields\":[[\"field\",7,{\"base-type\":\"type/Text\",\"join-alias\":\"People - User\"}],[\"field\",1,{\"base-type\":\"type/Text\",\"join-alias\":\"People - User\"}]],\"source-table\":1,\"strategy\":\"left-join\"}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "table",
+  "archived_directly": false,
+  "entity_id": "_GiVL6zYmsnBb1oqLCp4u",
+  "collection_preview": true,
+  "visualization_settings": {
+    "table.cell_column": "SUBTOTAL",
+    "table.columns": [
+      {
+        "enabled": true,
+        "name": "ID"
+      },
+      {
+        "enabled": true,
+        "name": "USER_ID"
+      },
+      {
+        "enabled": true,
+        "name": "PRODUCT_ID"
+      },
+      {
+        "enabled": true,
+        "name": "SUBTOTAL"
+      },
+      {
+        "enabled": true,
+        "name": "TAX"
+      },
+      {
+        "enabled": true,
+        "name": "TOTAL"
+      },
+      {
+        "enabled": true,
+        "name": "DISCOUNT"
+      },
+      {
+        "enabled": true,
+        "name": "CREATED_AT"
+      },
+      {
+        "enabled": true,
+        "name": "QUANTITY"
+      },
+      {
+        "enabled": true,
+        "name": "EMAIL"
+      },
+      {
+        "enabled": true,
+        "name": "Age"
+      },
+      {
+        "enabled": true,
+        "name": "STATE"
+      }
+    ],
+    "table.pivot_column": "SOURCE"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

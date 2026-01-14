@@ -1,0 +1,196 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Flow from viewing our website (empty) to checkout and subscribe",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 7,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": null,
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "BUTTON_LABEL",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        29,
+        {
+          "base-type": "type/Text"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 29,
+      "visibility_type": "normal",
+      "display_name": "Button Label",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "count",
+        {
+          "base-type": "type/Integer"
+        }
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Checkout funnel",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "lib/uuid": "59787e15-ec18-46f2-89a3-be7c2d1027ba",
+              "effective-type": "type/Text"
+            },
+            29
+          ]
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "1bff4e2c-69fe-4460-9b28-be1889d954df"
+            }
+          ]
+        ],
+        "source-table": 7
+      },
+      {
+        "lib/type": "mbql.stage/mbql",
+        "filters": [
+          [
+            "not-empty",
+            {
+              "lib/uuid": "3881bb34-1469-491a-abc9-a6c9239a07a0"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Text",
+                "lib/uuid": "2ccc44b9-2eca-4cc2-b0ec-86b8cb26cea2"
+              },
+              "BUTTON_LABEL"
+            ]
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 6,
+  "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\"not-empty\",[\"field\",\"BUTTON_LABEL\",{\"base-type\":\"type/Text\"}]],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",29,{\"base-type\":\"type/Text\"}]],\"source-table\":7}},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "funnel",
+  "archived_directly": false,
+  "entity_id": "UUZZsw19IuPTqdhho99oc",
+  "collection_preview": true,
+  "visualization_settings": {
+    "funnel.order_dimension": "BUTTON_LABEL",
+    "funnel.rows": [
+      {
+        "enabled": true,
+        "key": "Create Item",
+        "name": "Create Item"
+      },
+      {
+        "enabled": true,
+        "key": "Invite",
+        "name": "Invite"
+      },
+      {
+        "enabled": true,
+        "key": "Subscribe",
+        "name": "Subscribe"
+      },
+      {
+        "enabled": true,
+        "key": "Signup",
+        "name": "Signup"
+      },
+      {
+        "enabled": true,
+        "key": "Checkout",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

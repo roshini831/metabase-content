@@ -1,0 +1,164 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Compares total revenue this quarter to our goal",
+  "archived": false,
+  "view_count": 10,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "database_type": "DECFLOAT",
+      "semantic_type": null,
+      "lib/deduplicated-name": "sum",
+      "lib/original-name": "sum",
+      "name": "sum",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "sum",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/Float",
+      "lib/desired-column-alias": "sum",
+      "display_name": "Sum of Total",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 1,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 145337.23988311572,
+            "q1": 145337.23988311572,
+            "q3": 145337.23988311572,
+            "max": 145337.23988311572,
+            "sd": null,
+            "avg": 145337.23988311572
+          }
+        }
+      },
+      "base_type": "type/Float"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Revenue goal for this quarter",
+  "last_query_start": "2026-01-14T16:38:21.405746Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T16:38:21.432517Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": 180.1,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "9d1f0d4c-c9b1-440b-959f-1d8e913a0c65"
+            },
+            9
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "lib/uuid": "e1635f57-c21e-415d-8802-6804062212d1"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "256031cf-d32f-4455-8631-aab248d1e1cc",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            "current",
+            "quarter"
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 17,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],\"current\",\"quarter\"],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "progress",
+  "archived_directly": false,
+  "entity_id": "Ey2qt4I-wcg1E0846iUQS",
+  "collection_preview": true,
+  "visualization_settings": {
+    "progress.goal": 250000,
+    "column_settings": {
+      "[\"name\",\"sum\"]": {
+        "decimals": 0
+      }
+    }
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

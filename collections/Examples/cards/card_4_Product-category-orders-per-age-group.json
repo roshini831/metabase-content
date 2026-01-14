@@ -1,0 +1,252 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Shows a distribution of orders broken down by product categories across our customers' age groups",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": 1,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "base_type": "type/Decimal",
+      "description": "Age of the customer in years.",
+      "display_name": "Age",
+      "effective_type": "type/Decimal",
+      "field_ref": [
+        "field",
+        "Age",
+        {
+          "base-type": "type/BigInteger",
+          "binning": {
+            "strategy": "num-bins",
+            "num-bins": 10,
+            "min-value": 20,
+            "max-value": 70,
+            "bin-width": 5
+          }
+        }
+      ],
+      "name": "Age",
+      "semantic_type": "type/Quantity"
+    },
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "CATEGORY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "base-type": "type/Text",
+          "join-alias": "Products"
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 18,
+      "visibility_type": "normal",
+      "display_name": "Products → Category",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Product category orders per age group",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "joins": [
+          {
+            "alias": "Products",
+            "strategy": "left-join",
+            "conditions": [
+              [
+                "=",
+                {
+                  "lib/uuid": "033feb10-5e25-4441-920a-ef18efd962ad"
+                },
+                [
+                  "field",
+                  {
+                    "base-type": "type/Integer",
+                    "lib/uuid": "8a5aa4c1-ad86-41a0-a2dc-2e81282a612a"
+                  },
+                  "PRODUCT_ID"
+                ],
+                [
+                  "field",
+                  {
+                    "base-type": "type/BigInteger",
+                    "join-alias": "Products",
+                    "lib/uuid": "059077c5-2419-463e-9e35-89a2b9caefde",
+                    "effective-type": "type/BigInteger"
+                  },
+                  8
+                ]
+              ]
+            ],
+            "lib/type": "mbql/join",
+            "stages": [
+              {
+                "lib/type": "mbql.stage/mbql",
+                "source-table": 3
+              }
+            ],
+            "lib/options": {
+              "lib/uuid": "5ddb614b-ba00-428c-8d1b-f1ea8fbf3cc8"
+            }
+          }
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "84ea34b3-10d1-4af0-a1c4-473573838970"
+            }
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/BigInteger",
+              "binning": {
+                "strategy": "num-bins",
+                "num-bins": 10
+              },
+              "lib/uuid": "4d998b5b-c5a8-4328-ac24-9e69376d7299"
+            },
+            "Age"
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "join-alias": "Products",
+              "lib/uuid": "602cc509-549b-40b7-883b-3e70f68792aa",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "filters": [
+          [
+            "between",
+            {
+              "lib/uuid": "3bc2f936-9a4c-4cd0-a71a-296d591035c0"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/BigInteger",
+                "lib/uuid": "8704fa9e-03c3-464f-9059-f7c8aa08a411"
+              },
+              "Age"
+            ],
+            20,
+            70
+          ]
+        ],
+        "source-card": 1
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 4,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\",\"binning\":{\"strategy\":\"num-bins\",\"num-bins\":10}}],[\"field\",18,{\"base-type\":\"type/Text\",\"join-alias\":\"Products\"}]],\"filter\":[\"between\",[\"field\",\"Age\",{\"base-type\":\"type/BigInteger\"}],20,70],\"joins\":[{\"alias\":\"Products\",\"condition\":[\"=\",[\"field\",\"PRODUCT_ID\",{\"base-type\":\"type/Integer\"}],[\"field\",8,{\"base-type\":\"type/BigInteger\",\"join-alias\":\"Products\"}]],\"source-table\":3,\"strategy\":\"left-join\"}],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "bar",
+  "archived_directly": false,
+  "entity_id": "WMub5k6vo0zGP24qXQFNu",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.dimensions": [
+      "Age",
+      "CATEGORY"
+    ],
+    "graph.show_values": true,
+    "graph.x_axis.scale": "linear",
+    "stackable.stack_type": "stacked",
+    "graph.metrics": [
+      "count"
+    ]
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

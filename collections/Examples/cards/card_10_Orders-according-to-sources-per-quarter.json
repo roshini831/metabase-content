@@ -1,0 +1,306 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Orders placed per quarter broken down by source and formatted to highlight best and worst quarters",
+  "archived": false,
+  "view_count": 13,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The channel through which we acquired this user. Valid values include: Affiliate, Facebook, Google, Organic and Twitter",
+      "lib/type": "metadata/column",
+      "base-type": "type/Text",
+      "lib/deduplicated-name": "SOURCE",
+      "semantic-type": "type/Source",
+      "lib/original-name": "SOURCE",
+      "lib/breakout?": true,
+      "table-id": 1,
+      "name": "SOURCE",
+      "lib/source": "source/implicitly-joinable",
+      "lib/source-column-alias": "SOURCE",
+      "lib/original-display-name": "Source",
+      "source": "breakout",
+      "database-type": "CHARACTER VARYING",
+      "effective-type": "type/Text",
+      "active": true,
+      "id": 30,
+      "visibility-type": "normal",
+      "lib/desired-column-alias": "PEOPLE__via__USER_ID__SOURCE",
+      "display-name": "User → Source",
+      "position": 8,
+      "field-ref": [
+        "field",
+        30,
+        {
+          "source-field": 11
+        }
+      ],
+      "fk-field-id": 11,
+      "fingerprint": {
+        "global": {
+          "distinct-count": 5,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 7.4084
+          }
+        }
+      }
+    },
+    {
+      "description": "The date and time an order was submitted.",
+      "inherited-temporal-unit": "quarter",
+      "lib/type": "metadata/column",
+      "base-type": "type/DateTime",
+      "lib/deduplicated-name": "CREATED_AT",
+      "semantic-type": "type/CreationTimestamp",
+      "lib/original-name": "CREATED_AT",
+      "lib/breakout?": true,
+      "table-id": 2,
+      "unit": "quarter",
+      "name": "CREATED_AT",
+      "lib/source": "source/table-defaults",
+      "lib/source-column-alias": "CREATED_AT",
+      "lib/original-display-name": "Created At",
+      "source": "breakout",
+      "database-type": "TIMESTAMP",
+      "effective-type": "type/DateTime",
+      "active": true,
+      "id": 13,
+      "visibility-type": "normal",
+      "lib/desired-column-alias": "CREATED_AT",
+      "metabase.lib.field/temporal-unit": "quarter",
+      "display-name": "Created At: Quarter",
+      "position": 7,
+      "field-ref": [
+        "field",
+        13,
+        {
+          "temporal-unit": "quarter"
+        }
+      ],
+      "fingerprint": {
+        "global": {
+          "distinct-count": 10001,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/DateTime": {
+            "earliest": "2022-04-30T18:56:13.352Z",
+            "latest": "2026-04-19T14:07:15.657Z"
+          }
+        }
+      }
+    },
+    {
+      "lib/type": "metadata/column",
+      "base-type": "type/Float",
+      "lib/deduplicated-name": "sum",
+      "lib/original-name": "sum",
+      "name": "sum",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "sum",
+      "source": "aggregation",
+      "effective-type": "type/Float",
+      "lib/desired-column-alias": "sum",
+      "display-name": "Sum of Total",
+      "field-ref": [
+        "aggregation",
+        0
+      ]
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Orders according to sources per quarter",
+  "last_query_start": "2026-01-14T16:38:21.67675Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T16:38:21.698414Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": 64.64102564102564,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "3298d256-1360-4e77-bbb0-18419c71e554"
+            },
+            9
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 11,
+              "lib/uuid": "5118ffcc-435e-4f6f-b917-c6dbc505b246",
+              "effective-type": "type/Text"
+            },
+            30
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "quarter",
+              "lib/uuid": "c5766b6c-2993-4c4e-bf57-60160f3b0d3c",
+              "effective-type": "type/DateTime"
+            },
+            13
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "time-interval",
+            {
+              "include-current": true,
+              "lib/uuid": "03db3c5e-b440-4424-bae4-1cb625cc7757"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "850a9bad-1089-4c36-a1ab-25147ff1868a",
+                "effective-type": "type/DateTime"
+              },
+              13
+            ],
+            -2,
+            "year"
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 10,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",9]],\"breakout\":[[\"field\",30,{\"base-type\":\"type/Text\",\"source-field\":11}],[\"field\",13,{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"filter\":[\"time-interval\",[\"field\",13,{\"base-type\":\"type/DateTime\"}],-2,\"year\",{\"include-current\":true}],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "pivot",
+  "archived_directly": false,
+  "entity_id": "km2d9-ZqHrlAM79yPh13G",
+  "collection_preview": true,
+  "visualization_settings": {
+    "pivot_table.column_split": {
+      "columns": [
+        "SOURCE"
+      ],
+      "rows": [
+        "CREATED_AT"
+      ],
+      "values": [
+        "sum"
+      ]
+    },
+    "pivot_table.column_widths": {
+      "leftHeaderWidths": [
+        135
+      ],
+      "totalLeftHeaderWidths": 135,
+      "valueHeaderWidths": {
+        "0": 148,
+        "1": 158,
+        "2": 159,
+        "3": 144,
+        "4": 139,
+        "5": 124
+      }
+    },
+    "table.column_formatting": [
+      {
+        "max_value": 100,
+        "color": "#509EE3",
+        "columns": [
+          "sum"
+        ],
+        "value": "",
+        "type": "range",
+        "colors": [
+          "white",
+          "#A7D07C"
+        ],
+        "highlight_row": false,
+        "min_value": 0,
+        "min_type": null,
+        "id": 0,
+        "operator": "=",
+        "max_type": null
+      }
+    ],
+    "column_settings": {
+      "[\"name\",\"CREATED_AT\"]": {
+        "column_title": "Date"
+      }
+    }
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

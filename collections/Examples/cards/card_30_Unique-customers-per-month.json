@@ -1,0 +1,176 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Unique customer email addresses last quarter compared to the previous",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": 1,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The date and time an order was submitted.",
+      "semantic_type": "type/CreationTimestamp",
+      "unit": "quarter",
+      "name": "CREATED_AT",
+      "settings": {
+        "time_enabled": "milliseconds"
+      },
+      "field_ref": [
+        "field",
+        "CREATED_AT",
+        {
+          "base-type": "type/DateTime",
+          "temporal-unit": "quarter"
+        }
+      ],
+      "effective_type": "type/DateTime",
+      "id": 13,
+      "visibility_type": "normal",
+      "display_name": "Created At: Quarter",
+      "base_type": "type/DateTime"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Distinct values of Customer Email",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity",
+      "settings": {
+        "link_text": ""
+      }
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Unique customers per month",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 0,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "aggregation": [
+          [
+            "distinct",
+            {
+              "lib/uuid": "9abf1b2c-524d-444e-b155-9e5a88eac1d4"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Text",
+                "lib/uuid": "6c218412-7385-4f36-8c30-f8efe7a595f6"
+              },
+              "EMAIL"
+            ]
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/DateTime",
+              "temporal-unit": "quarter",
+              "lib/uuid": "f2067a2a-b1ff-481e-998d-020ed7849596"
+            },
+            "CREATED_AT"
+          ]
+        ],
+        "filters": [
+          [
+            "time-interval",
+            {
+              "lib/uuid": "8059b698-abf4-470a-8140-d6f42ac0b963"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/DateTime",
+                "lib/uuid": "617d0aa8-1ef3-4041-ab63-07d9f8265d74"
+              },
+              "CREATED_AT"
+            ],
+            -2,
+            "quarter"
+          ]
+        ],
+        "source-card": 1
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 30,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"distinct\",[\"field\",\"EMAIL\",{\"base-type\":\"type/Text\"}]]],\"breakout\":[[\"field\",\"CREATED_AT\",{\"base-type\":\"type/DateTime\",\"temporal-unit\":\"quarter\"}]],\"filter\":[\"time-interval\",[\"field\",\"CREATED_AT\",{\"base-type\":\"type/DateTime\"}],-2,\"quarter\"],\"source-table\":\"card__1\"},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "smartscalar",
+  "archived_directly": false,
+  "entity_id": "leO-OHTwIMltfpcLLOJxj",
+  "collection_preview": true,
+  "visualization_settings": {},
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

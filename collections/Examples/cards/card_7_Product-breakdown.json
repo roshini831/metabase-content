@@ -1,0 +1,273 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Orders for each product, grouped by product category",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The name of the product as it should be displayed to customers.",
+      "semantic_type": "type/Title",
+      "coercion_strategy": null,
+      "name": "TITLE",
+      "settings": {
+        "link_url": "",
+        "view_as": null
+      },
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        17,
+        {
+          "base-type": "type/Text",
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 17,
+      "visibility_type": "normal",
+      "display_name": "Product → Title",
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "CATEGORY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "base-type": "type/Text",
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 18,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "field",
+        "count",
+        {
+          "base-type": "type/Integer"
+        }
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Product breakdown",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "2d1280e5-c628-40d9-a478-d8fa6c2ff3b1",
+              "effective-type": "type/Text"
+            },
+            17
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "ac44dde2-f069-4307-8d92-7a31d40bf949",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "d33e939a-43fd-4ebb-a167-044c759d40f8"
+            }
+          ]
+        ],
+        "source-table": 2
+      },
+      {
+        "lib/type": "mbql.stage/mbql",
+        "filters": [
+          [
+            ">=",
+            {
+              "lib/uuid": "d5af4b3c-5966-49e8-8204-97bff76e0d50"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Integer",
+                "lib/uuid": "b4165584-ebe9-4791-888f-4ebeefbefb5d"
+              },
+              "count"
+            ],
+            105
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 7,
+  "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\">=\",[\"field\",\"count\",{\"base-type\":\"type/Integer\"}],105],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"source-table\":2}},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "pie",
+  "archived_directly": false,
+  "entity_id": "RpKYsFwHfjcckbgj4oBKK",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.y_axis.title_text": "",
+    "graph.show_values": true,
+    "pie.slice_threshold": 11,
+    "pie.percent_visibility": "legend",
+    "pie.dimension": [
+      "CATEGORY",
+      "TITLE",
+      "count"
+    ],
+    "graph.series_order_dimension": null,
+    "graph.x_axis.title_text": "",
+    "pie.sort_rows": false,
+    "pie.rows": [
+      {
+        "color": "#51528D",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Doohickey",
+        "name": "Doohickey",
+        "originalName": "Doohickey"
+      },
+      {
+        "color": "#8A5EB0",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Gadget",
+        "name": "Gadget",
+        "originalName": "Gadget"
+      },
+      {
+        "color": "#69C8C8",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Gizmo",
+        "name": "Gizmo",
+        "originalName": "Gizmo"
+      },
+      {
+        "color": "#227FD2",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Widget",
+        "name": "Widget",
+        "originalName": "Widget"
+      }
+    ],
+    "graph.metrics": [
+      "count"
+    ],
+    "graph.series_order": null,
+    "pie.decimal_places": 2,
+    "series_settings": {
+      "count": {
+        "color": "#999AC4"
+      }
+    },
+    "graph.dimensions": [
+      "TITLE"
+    ],
+    "stackable.stack_type": null
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

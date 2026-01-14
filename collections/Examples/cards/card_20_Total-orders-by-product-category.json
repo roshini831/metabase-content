@@ -1,0 +1,242 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Breaks down the overall performance of each of the product categories",
+  "archived": false,
+  "view_count": 10,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Category",
+      "table_id": 3,
+      "lib/deduplicated-name": "CATEGORY",
+      "lib/original-name": "CATEGORY",
+      "lib/breakout?": true,
+      "name": "CATEGORY",
+      "lib/source": "source/implicitly-joinable",
+      "lib/source-column-alias": "CATEGORY",
+      "lib/original-display-name": "Category",
+      "source": "breakout",
+      "fk_field_id": 14,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 18,
+      "lib/desired-column-alias": "PRODUCTS__via__PRODUCT_ID__CATEGORY",
+      "position": 3,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 4,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 6.375
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "database_type": "BIGINT",
+      "semantic_type": "type/Quantity",
+      "lib/deduplicated-name": "count",
+      "lib/original-name": "count",
+      "name": "count",
+      "lib/source": "source/aggregations",
+      "lib/source-column-alias": "count",
+      "source": "aggregation",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "effective_type": "type/BigInteger",
+      "lib/desired-column-alias": "count",
+      "display_name": "Count",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 4,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 3799.0,
+            "q1": 4212.5,
+            "q3": 4795.5,
+            "max": 4851.0,
+            "sd": 478.8924722732651,
+            "avg": 4504.0
+          }
+        }
+      },
+      "base_type": "type/BigInteger"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Total orders by product category",
+  "last_query_start": "2026-01-14T16:38:21.402046Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T16:38:21.432517Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": 182.7,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "d01be3d0-9f9e-42ef-b427-118155051572",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "aggregation": [
+          [
+            "metric",
+            {
+              "lib/uuid": "b8968bfa-0395-464c-b53f-5e4d969b253d"
+            },
+            19
+          ]
+        ],
+        "source-table": 2
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 20,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"metric\",19]],\"breakout\":[[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "pie",
+  "archived_directly": false,
+  "entity_id": "ShsD1PjGTlFIvzm5FM9qC",
+  "collection_preview": true,
+  "visualization_settings": {
+    "pie.decimal_places": 0,
+    "pie.percent_visibility": "both",
+    "pie.rows": [
+      {
+        "color": "#7172AD",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Doohickey",
+        "name": "Doohickey",
+        "originalName": "Doohickey"
+      },
+      {
+        "color": "#A989C5",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Gadget",
+        "name": "Gadget",
+        "originalName": "Gadget"
+      },
+      {
+        "color": "#C7EAEA",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Gizmo",
+        "name": "Gizmo",
+        "originalName": "Gizmo"
+      },
+      {
+        "color": "#227FD2",
+        "defaultColor": false,
+        "enabled": true,
+        "hidden": false,
+        "isOther": false,
+        "key": "Widget",
+        "name": "Widget",
+        "originalName": "Widget"
+      }
+    ],
+    "pie.show_labels": false,
+    "pie.sort_rows": false
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

@@ -1,0 +1,324 @@
+{
+  "cache_invalidated_at": null,
+  "description": "An ordered list of our most successful products",
+  "archived": false,
+  "view_count": 1,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The name of the product as it should be displayed to customers.",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Title",
+      "table_id": 3,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "TITLE",
+      "lib/original-name": "TITLE",
+      "lib/breakout?": false,
+      "name": "TITLE",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "PRODUCTS__via__PRODUCT_ID__TITLE",
+      "lib/original-display-name": "Title",
+      "lib/original-fk-field-id": 14,
+      "source": "fields",
+      "field_ref": [
+        "field",
+        17,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 17,
+      "lib/desired-column-alias": "PRODUCTS__via__PRODUCT_ID__TITLE",
+      "position": 2,
+      "visibility_type": "normal",
+      "display_name": "Product → Title",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 199,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 21.495
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "database_type": "CHARACTER VARYING",
+      "semantic_type": "type/Category",
+      "table_id": 3,
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "CATEGORY",
+      "lib/original-name": "CATEGORY",
+      "lib/breakout?": false,
+      "name": "CATEGORY",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "PRODUCTS__via__PRODUCT_ID__CATEGORY",
+      "lib/original-display-name": "Category",
+      "lib/original-fk-field-id": 14,
+      "source": "fields",
+      "field_ref": [
+        "field",
+        18,
+        null
+      ],
+      "effective_type": "type/Text",
+      "active": true,
+      "id": 18,
+      "lib/desired-column-alias": "PRODUCTS__via__PRODUCT_ID__CATEGORY",
+      "position": 3,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 4,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Text": {
+            "percent-json": 0.0,
+            "percent-url": 0.0,
+            "percent-email": 0.0,
+            "percent-state": 0.0,
+            "average-length": 6.375
+          }
+        }
+      },
+      "base_type": "type/Text"
+    },
+    {
+      "database_type": "BIGINT",
+      "semantic_type": "type/Quantity",
+      "qp/implicit-field?": true,
+      "lib/deduplicated-name": "count",
+      "lib/original-name": "count",
+      "lib/breakout?": false,
+      "name": "count",
+      "lib/source": "source/previous-stage",
+      "lib/source-column-alias": "count",
+      "source": "fields",
+      "field_ref": [
+        "field",
+        "count",
+        {
+          "base-type": "type/BigInteger"
+        }
+      ],
+      "effective_type": "type/BigInteger",
+      "lib/desired-column-alias": "count",
+      "display_name": "Count",
+      "fingerprint": {
+        "global": {
+          "distinct-count": 7,
+          "nil%": 0.0
+        },
+        "type": {
+          "type/Number": {
+            "min": 110.0,
+            "q1": 112.74341649025257,
+            "q3": 118.25,
+            "max": 120.0,
+            "sd": 3.5039660069381062,
+            "avg": 115.55555555555556
+          }
+        }
+      },
+      "base_type": "type/BigInteger"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Best selling products",
+  "last_query_start": "2026-01-14T17:01:55.032129Z",
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-14T17:01:55.065719Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": 86.0,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "order-by": [
+          [
+            "desc",
+            {
+              "lib/uuid": "cd8a5d62-3d90-4bc0-bcaf-cfc6376528e5"
+            },
+            [
+              "aggregation",
+              {
+                "lib/uuid": "143c7a6a-baf1-4305-97b7-4e9961f68c68"
+              },
+              "283ff9ec-3576-45d9-814f-46684241e300"
+            ]
+          ]
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "283ff9ec-3576-45d9-814f-46684241e300"
+            }
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "88339218-f722-4ed2-a266-48cb8aa7578a",
+              "effective-type": "type/Text"
+            },
+            17
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "0873612c-44de-47ac-a317-74892b633232",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "!=",
+            {
+              "lib/uuid": "f2a25624-ff2a-44e7-b767-e47fae74a84e"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Text",
+                "source-field": 14,
+                "lib/uuid": "d70d7458-8fb8-447d-9bd3-0711a34715ca",
+                "effective-type": "type/Text"
+              },
+              17
+            ],
+            "Incredible Aluminum Knife"
+          ]
+        ]
+      },
+      {
+        "lib/type": "mbql.stage/mbql",
+        "filters": [
+          [
+            ">=",
+            {
+              "lib/uuid": "6ae5da87-88dd-4688-8809-0cf445ae8a7a"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Integer",
+                "lib/uuid": "1225b25e-2ab7-49f3-b26b-bcf022b92ed7"
+              },
+              "count"
+            ],
+            110
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 21,
+  "legacy_query": "{\"database\":1,\"query\":{\"filter\":[\">=\",[\"field\",\"count\",{\"base-type\":\"type/Integer\"}],110],\"source-query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"!=\",[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],\"Incredible Aluminum Knife\"],\"order-by\":[[\"desc\",[\"aggregation\",0]]],\"source-table\":2}},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "row",
+  "archived_directly": false,
+  "entity_id": "S-hEu1jZ2-822qvBQ1EiT",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.y_axis.title_text": "",
+    "graph.show_values": true,
+    "graph.series_order_dimension": null,
+    "graph.x_axis.title_text": "",
+    "graph.metrics": [
+      "count"
+    ],
+    "graph.series_order": null,
+    "series_settings": {
+      "count": {
+        "color": "#999AC4"
+      }
+    },
+    "graph.dimensions": [
+      "TITLE"
+    ],
+    "stackable.stack_type": null
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}

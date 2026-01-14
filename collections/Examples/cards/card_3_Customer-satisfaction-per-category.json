@@ -1,0 +1,246 @@
+{
+  "cache_invalidated_at": null,
+  "description": "Shows the distribution of the product categories along the scale of customer ratings",
+  "archived": false,
+  "view_count": 0,
+  "collection_position": null,
+  "source_card_id": null,
+  "table_id": 2,
+  "can_run_adhoc_query": true,
+  "result_metadata": [
+    {
+      "description": "The average rating users have given the product. This ranges from 1 - 5",
+      "semantic_type": "type/Score",
+      "coercion_strategy": null,
+      "name": "RATING",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        16,
+        {
+          "base-type": "type/Float",
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Float",
+      "id": 16,
+      "visibility_type": "normal",
+      "display_name": "Product → Rating",
+      "base_type": "type/Float"
+    },
+    {
+      "description": "The type of product, valid values include: Doohicky, Gadget, Gizmo and Widget",
+      "semantic_type": "type/Category",
+      "coercion_strategy": null,
+      "name": "CATEGORY",
+      "settings": null,
+      "fk_target_field_id": null,
+      "field_ref": [
+        "field",
+        18,
+        {
+          "base-type": "type/Text",
+          "source-field": 14
+        }
+      ],
+      "effective_type": "type/Text",
+      "id": 18,
+      "visibility_type": "normal",
+      "display_name": "Product → Category",
+      "base_type": "type/Text"
+    },
+    {
+      "base_type": "type/BigInteger",
+      "display_name": "Count",
+      "effective_type": "type/BigInteger",
+      "field_ref": [
+        "aggregation",
+        0
+      ],
+      "name": "count",
+      "semantic_type": "type/Quantity"
+    }
+  ],
+  "embedding_type": null,
+  "dependency_analysis_version": 0,
+  "creator": {
+    "email": "internal@metabase.com",
+    "first_name": "Metabase",
+    "last_login": null,
+    "is_qbnewb": true,
+    "is_superuser": false,
+    "id": 13371338,
+    "last_name": "Internal",
+    "tenant_id": null,
+    "date_joined": "2026-01-13T21:47:48.834798Z",
+    "common_name": "Metabase Internal"
+  },
+  "initially_published_at": null,
+  "can_write": true,
+  "card_schema": 23,
+  "database_id": 1,
+  "enable_embedding": false,
+  "collection_id": 2,
+  "query_type": "query",
+  "name": "Customer satisfaction per category",
+  "last_query_start": null,
+  "is_remote_synced": false,
+  "dashboard_count": 1,
+  "document_id": null,
+  "last_used_at": "2026-01-13T21:47:49.427632Z",
+  "dashboard": null,
+  "type": "question",
+  "average_query_time": null,
+  "creator_id": 13371338,
+  "can_restore": false,
+  "moderation_reviews": [],
+  "updated_at": "2026-01-13T21:47:49.427632Z",
+  "made_public_by_id": null,
+  "embedding_params": null,
+  "cache_ttl": null,
+  "dataset_query": {
+    "lib/type": "mbql/query",
+    "stages": [
+      {
+        "lib/type": "mbql.stage/mbql",
+        "order-by": [
+          [
+            "desc",
+            {
+              "lib/uuid": "7d169994-0d0f-4059-99cd-6afa195867fd"
+            },
+            [
+              "field",
+              {
+                "source-field": 14,
+                "base-type": "type/Float",
+                "binning": {
+                  "strategy": "default"
+                },
+                "lib/uuid": "0daaf609-be84-418b-8685-983017bac7d0",
+                "effective-type": "type/Float"
+              },
+              16
+            ]
+          ]
+        ],
+        "aggregation": [
+          [
+            "count",
+            {
+              "lib/uuid": "1e6e0283-eea9-4235-85bb-218758c57fd4"
+            }
+          ]
+        ],
+        "breakout": [
+          [
+            "field",
+            {
+              "base-type": "type/Float",
+              "source-field": 14,
+              "lib/uuid": "b1105c58-ad26-4ee8-9870-7c025cf5fbe0",
+              "effective-type": "type/Float"
+            },
+            16
+          ],
+          [
+            "field",
+            {
+              "base-type": "type/Text",
+              "source-field": 14,
+              "lib/uuid": "8d53e9df-92d8-48d8-afb8-f1d693660fcd",
+              "effective-type": "type/Text"
+            },
+            18
+          ]
+        ],
+        "source-table": 2,
+        "filters": [
+          [
+            "!=",
+            {
+              "lib/uuid": "35fe7663-a748-4cb4-8202-b4a68a0c8712"
+            },
+            [
+              "field",
+              {
+                "base-type": "type/Text",
+                "source-field": 14,
+                "lib/uuid": "019d77a2-e1e0-44d9-8d72-4429dc318d75",
+                "effective-type": "type/Text"
+              },
+              17
+            ],
+            "Incredible Aluminum Knife"
+          ]
+        ]
+      }
+    ],
+    "database": 1,
+    "lib.convert/converted?": true
+  },
+  "id": 3,
+  "legacy_query": "{\"database\":1,\"query\":{\"aggregation\":[[\"count\"]],\"breakout\":[[\"field\",16,{\"base-type\":\"type/Float\",\"source-field\":14}],[\"field\",18,{\"base-type\":\"type/Text\",\"source-field\":14}]],\"filter\":[\"!=\",[\"field\",17,{\"base-type\":\"type/Text\",\"source-field\":14}],\"Incredible Aluminum Knife\"],\"order-by\":[[\"desc\",[\"field\",16,{\"base-type\":\"type/Float\",\"source-field\":14,\"binning\":{\"strategy\":\"default\"}}]]],\"source-table\":2},\"type\":\"query\"}",
+  "parameter_mappings": [],
+  "can_manage_db": true,
+  "display": "bar",
+  "archived_directly": false,
+  "entity_id": "OJ-I03ZsQ7IBrzr29B_8o",
+  "collection_preview": true,
+  "visualization_settings": {
+    "graph.y_axis.title_text": "",
+    "graph.show_values": true,
+    "graph.x_axis.title_text": "",
+    "graph.metrics": [
+      "count"
+    ],
+    "graph.label_value_formatting": "compact",
+    "series_settings": {
+      "Doohickey": {
+        "color": "#7172AD"
+      },
+      "Gadget": {
+        "color": "#999AC4"
+      },
+      "Gizmo": {
+        "color": "#227FD2"
+      },
+      "Widget": {
+        "color": "#C7EAEA"
+      }
+    },
+    "graph.x_axis.scale": "histogram",
+    "graph.dimensions": [
+      "RATING",
+      "CATEGORY"
+    ],
+    "stackable.stack_type": "stacked"
+  },
+  "collection": {
+    "authority_level": null,
+    "description": "Some examples to get started with",
+    "archived": false,
+    "slug": "examples",
+    "archive_operation_id": null,
+    "name": "Examples",
+    "is_remote_synced": false,
+    "personal_owner_id": null,
+    "type": null,
+    "is_sample": true,
+    "id": 2,
+    "archived_directly": null,
+    "entity_id": "HyB3nRtqb7pBPhFG26evI",
+    "location": "/",
+    "namespace": null,
+    "is_personal": false,
+    "created_at": "2026-01-13T21:47:49.427632Z"
+  },
+  "metabase_version": null,
+  "parameters": [],
+  "dashboard_id": null,
+  "created_at": "2026-01-13T21:47:49.427632Z",
+  "parameter_usage_count": 0,
+  "public_uuid": null,
+  "can_delete": false
+}
