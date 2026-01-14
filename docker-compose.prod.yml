@@ -1,0 +1,41 @@
+services:
+  # MySQL database for production Metabase application data
+  metabase-mysql:
+    image: mysql:8.0
+    container_name: metabase-prod-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: metabase_root_password
+      MYSQL_USER: metabase
+      MYSQL_PASSWORD: metabase_prod_password
+      MYSQL_DATABASE: metabase_prod
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - metabase_prod_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "metabase", "-pmetabase_prod_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  # Production Metabase on port 3001
+  metabase-prod:
+    image: metabase/metabase:v0.58.1
+    container_name: metabase-prod
+    depends_on:
+      metabase-mysql:
+        condition: service_healthy
+    ports:
+      - "3001:3000"
+    environment:
+      # Use MySQL for production (not H2)
+      MB_DB_TYPE: mysql
+      MB_DB_DBNAME: metabase_prod
+      MB_DB_PORT: 3306
+      MB_DB_USER: metabase
+      MB_DB_PASS: metabase_prod_password
+      MB_DB_HOST: metabase-mysql
+    restart: unless-stopped
+
+volumes:
+  metabase_prod_mysql_data:
