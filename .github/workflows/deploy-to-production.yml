@@ -23,7 +23,7 @@ jobs:
 
       - name: Download Metabase JAR
         run: |
-          curl -L -o metabase.jar https://downloads.metabase.com/v0.49.6/metabase.jar
+          curl -L -o metabase.jar https://downloads.metabase.com/v0.58.1/metabase.jar
         # NOTE: Update the version to match your Metabase version
 
       - name: Import to Production Metabase

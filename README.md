@@ -46,7 +46,7 @@ postgresql://user:password@host:5432/metabase_prod
 
 Edit `.github/workflows/deploy-to-production.yml` and update the Metabase version to match your instances:
 ```yaml
-curl -L -o metabase.jar https://downloads.metabase.com/v0.49.6/metabase.jar
+curl -L -o metabase.jar https://downloads.metabase.com/v0.58.1/metabase.jar
 ```
 
 ## 🔄 Workflow
