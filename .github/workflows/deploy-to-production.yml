@@ -29,7 +29,8 @@ jobs:
             --target-url "$MB_TARGET_URL" \
             --target-username "$MB_TARGET_USERNAME" \
             --target-password "$MB_TARGET_PASSWORD" \
-            --import-dir ./collections \
+            --export-dir ./collections \
+            --db-map ./db-map.json \
             --metabase-version v57
 
       - name: Notify on Success
